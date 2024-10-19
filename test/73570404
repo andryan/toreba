@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html class="en" lang="ja">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="CyberStep,Inc." />
+	<meta name="description" content="A real crane game available online!? Fun to see, fun to play! Here is the final edition of THE crane game, Toreba!" />
+	<meta name="copyright" content="Copyright&copy;2011-2018 CyberStep, Inc. All Rights Reserved." />
+	
+	<!--[if lt IE 9]>
+		<script type="text/javascript" src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<script type="text/javascript" src="http://www.toreba.net/js/nwmatcher-1.2.5.js"></script>
+		<script type="text/javascript" src="http://www.toreba.net/js/selectivizr-min.js"></script>
+		<script type="text/javascript" src="http://www.toreba.net/js/jquery.corner.js"></script>
+	<![endif]-->
+	<!--[if IE 6]>
+		<script type="text/javascript" src="http://www.toreba.net/js/DD_belatedPNG.js"></script>
+		<script>DD_belatedPNG.fix('*');</script>
+	<![endif]-->
+	
+	<!-- outcss -->
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/base/reset.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/base/common.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/base/component.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/base/layout.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/css3.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/base/nolayout.css" />
+	<link rel="stylesheet" type="text/css" href="http://www.toreba.net/css/base/simple.css" />
+	<link href='https://fonts.googleapis.com/css?family=Nova+Round' rel='stylesheet' type='text/css'>
+	
+	<!-- outjs -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+	
+	<script type="text/javascript" src="http://www.toreba.net/js/common.js"></script>
+	<script type="text/javascript" src="http://www.toreba.net/js/toreba.js"></script>
+	<script type="text/javascript" src="http://www.toreba.net/js/jquery.popupwindow.js"></script>
+	
+	<script type="text/javascript" src="http://www.toreba.net/js/css_browser_selector.js"></script>
+	<script type="text/javascript" src="http://www.toreba.net/js/ddsmoothmenu.js"></script>
+	<script type="text/javascript" src="http://www.toreba.net/js/jquery.page-scroller.js"></script>
+	<script type="text/javascript" src="http://www.toreba.net/js/jqueryAutoHeight.js"></script>
+	
+	<!-- injs -->
+	<script type="text/javascript">
+		$(function() {
+			$(".popupwindow").popupwindow();
+		});
+	</script>
+	
+	<script type="text/javascript">
+		var _base_urls = {
+			'base': 'http://www.toreba.net/',
+			'include': 'http://www.toreba.net/',
+			'ssl': 'https://www.toreba.net/'
+		};
+	</script>
+	
+	<!--[if lt IE 9]>
+	<script type="text/javascript">
+			document.createElement('header');
+			document.createElement('section');
+			document.createElement('nav');
+			document.createElement('aside');
+			document.createElement('footer');
+			document.createElement('article');
+			document.createElement('time');
+	</script>
+	<![endif]-->
+	
+	<title>Cyberstep Toreba</title>
+	<link rel="stylesheet" href="http://www.toreba.net/css/put/error.css?v=20170127181357" />
+		<link rel="shortcut icon" href="http://www.toreba.net/images/favicon.ico" type="image/vnd.microsoft.icon" />
+	<link rel="icon" href="http://www.toreba.net/images/favicon.gif" type="image/gif" />
+</head>
+<body>
+	<!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-SRC4Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-SRC4Q');</script><!-- End Google Tag Manager -->
+	<div id="wrap_toreba" class="field">
+		<header id="wrap_header" class="area">
+	<div id="header">
+		<style type="text/css">
+#ohsnap {
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	margin-left: 5px;
+	z-index: 200;
+}
+.alert {
+	text-align: center;
+	margin-top: 10px;
+	padding: 15px;
+	border: 1px solid #eed3d7;
+	border-radius: 4px;
+	float: right;
+	clear: right;
+}
+.alert-blue {
+	color: white;
+	background-color: #4A89DC;
+}
+</style>
+<script type="text/javascript" src="http://www.toreba.net/js/ohsnap.js"></script>
+
+<script type="text/javascript">
+		ddsmoothmenu.init({
+		mainmenuid: "nav_global",
+		orientation: 'h', //"h" or "v"
+		classname: 'ddmenu',
+		contentsource: "markup"
+	})
+	ddsmoothmenu.init({
+		mainmenuid: "nav_account",
+		orientation: 'h', //"h" or "v"
+		classname: 'ddmenu',
+		contentsource: "markup"
+	})
+	ddsmoothmenu.init({
+		mainmenuid: "nav_language",
+		orientation: 'h', //"h" or "v"
+		classname: 'ddmenu',
+		contentsource: "markup"
+	})
+</script>
+<script>
+$(function() { 	/*保有期間が期限切れになる通知*/
+	var expire_msg = '';
+	if (expire_msg && expire_msg.length !== 0) {
+		ohSnap(expire_msg, {'color':'blue'});
+	}
+})
+</script>
+<div id="header_sub">
+	<div id="content_header_sub">
+		<div id="nav_header_fl">
+			<div id="nav_global" class="ddmenu">
+				<h1>
+					<a href="http://www.toreba.net/home"><img src="/images/en/logo_toreba.png" alt="TOREBA" width="112" height="44"></a>
+				</h1>
+				<ul>
+					<li>
+						<a href="http://www.toreba.net/support/guide/toreba_guide" title="What is Toreba?">What is Toreba?</a>
+						<ul>
+							<li><a href="http://www.toreba.net/support/guide/toreba_guide/guide_01" onclick="location.href='http://www.toreba.net/support/guide/toreba_guide/guide_01'; return false;">What is Toreba?</a></li>
+							<li><a href="http://www.toreba.net/support/guide/toreba_guide/guide_02" onclick="location.href='http://www.toreba.net/support/guide/toreba_guide/guide_02'; return false;">Play Guide</a></li>
+							<li><a href="http://www.toreba.net/support/guide/toreba_guide/guide_03" onclick="location.href='http://www.toreba.net/support/guide/toreba_guide/guide_03'; return false;">About Shipping</a></li>
+						</ul>
+					</li>
+					<li>
+						<a>Play</a>
+						<ul>
+							<li>
+								<a href="http://www.toreba.net/prize" title="Prize">Prize</a>
+								<ul>
+									<li><a href="http://www.toreba.net/prize" onclick="location.href='http://www.toreba.net/prize'; return false;">Prizes now available</a></li>
+									<li><a href="http://www.toreba.net/prize/past" onclick="location.href='http://www.toreba.net/prize/past'; return false;">Old Prizes</a></li>
+								</ul>
+							</li>
+							<li><a href="http://www.toreba.net/replay" title="Replay">Replay</a></li>
+						</ul>
+					</li>
+					<li>
+						<a>Support</a>
+						<ul>
+							<li><a href="http://www.toreba.net/help/faq" title="FAQ">FAQ</a></li>
+							<li><a href="http://www.toreba.net/support/guide/sitemap" title="Site Map">Site Map</a></li>
+							<li><a href="https://www.toreba.net/contact" title="Inquiry">Inquiry</a></li>
+							<li><a href="http://www.toreba.net/support/terms/service" title="Terms of Service">Terms of Service</a></li>
+														<li><a href="http://www.toreba.net/support/terms/policy" title="Privacy Policy">Privacy Policy</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- //#nav_global -->
+		</div><!-- //#nav_header_fl -->
+		<div id="nav_header_fr">
+			<nav id="nav_language" class="ddmenu">
+				<ul>
+					<li>
+						<a>Language</a>
+						<ul>
+							<li><a href="http://www.toreba.net/ja/replay/detail/73570404">日本語</a></li>
+							<li><a href="http://www.toreba.net/en/replay/detail/73570404">English</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav><!-- //#nav_language -->
+			<nav id="nav_mypage" class="ddmenu">
+				<ul>
+					<li class="li_select">
+<script>
+	var ga = ga || function() {
+	(ga.q = ga.q || []).push(arguments);
+	};
+	ga('set', '&uid', '5991922'); </script>
+
+								<a href="https://www.toreba.net/mypage/order" id="btn_cart" title="Shopping Cart"><span>0</span><span>Shopping Cart</span>
+								</a>
+								<ul class="select_inner cart">
+									<li><a href="https://www.toreba.net/mypage/order" >
+										Prizes in Cart：<span class="bold">0</span><br>
+									</a></li>
+								</ul>
+					</li>
+				</ul>
+			</nav><!-- //#nav_mypage -->
+			<nav id="nav_account" class="ddmenu">
+				<ul>
+					<li>
+						<a class="name"><span>Andryan</span></a>
+						<ul>
+							<li><a href="https://www.toreba.net/mypage/home" title="Outline">Outline</a></li>
+							<li><a href="http://www.toreba.net/mypage/record/all" title="Play History">Play History</a></li>
+							<li><a href="https://www.toreba.net/mypage/payment/history" title="TP Purchase History">TP Purchase History</a></li>
+							<li><a href="https://www.toreba.net/mypage/record/get" title="Obtained Prizes History">Obtained Prizes History</a></li>
+							<li>
+								<a href="https://www.toreba.net/mypage/order_global" title="Prize Shipping">Prize Shipping								</a>
+							</li>
+							<li><a href="https://www.toreba.net/mypage/ticket" title="Ticket">Ticket</a></li>
+							<li><a href="https://www.toreba.net/mypage/order/history" title="Shipping History">Shipping History</a></li>
+							<li><a href="https://www.toreba.net/mypage/change_profile/form" title="Change Profile">Change Profile</a></li>
+							<li><a href="http://www.toreba.net/mypage/present_code" title="Present Code">Present Code</a></li>
+							<li><a href="https://www.toreba.net/mypage/survey_list" title="Survey List">Survey List</a></li>
+							<li><a href="https://www.toreba.net/account/logout" title="Logout">Logout</a></li>
+						</ul>
+					</li>
+				</ul>
+			</nav><!-- //#nav_account -->
+	<a href="https://www.toreba.net/purchase/home" id="btn_charge" class="btn_notice" title="Purchase Points">Purchase Points<br>
+		<span>1,350 TP</span>
+	</a>
+		</div><!-- //#nav_header_fr -->
+	</div><!-- //#content_header_sub -->
+</div><!-- //#header_sub -->
+<div id="ohsnap"></div>
+
+	</div>	<!-- //#header -->
+</header>	<!-- //#wrap_header -->
+		<div id="container" class="area">
+			<div id="simple_body" class="simple section">
+				<div id="contents_simple_main" class="group">
+					
+<script type="text/javascript">
+	window.onload = function () {
+		$('#service_now_block .entry').autoHeight({column:4, height:'height'});
+	};
+</script>
+
+<div id="error404_body" class="error section">
+<div id="contents_nolayout" class="group">
+
+<section id="error_block" class="part">
+	<header>
+		<h1>404 Not Found</h1>
+	</header>
+	<div class="content_error">
+		<p class="content_error_txt">
+	Nothing could be displayed on the specified page (URL).<br />
+	The address of the page you are searching for may have been changed / deleted, or may have been deactivated temporarily.<br /><br />
+
+	Make sure that you typed the URL correctly.<br />
+	If this page appeared after you clicked a link on the site,
+	please report the dead link to us via the <a href="/contact">Contact Us</a> form.
+</p>
+	<!-- content_error --></div>
+<!-- error_block --></section>
+
+<!-- contents_nolayout --></div>
+<!-- error404_body --></div>
+				</div><!-- // #contents_simple_main -->
+			</div><!-- // #simple_body -->
+		</div>
+		
+<script type="text/javascript" src="http://www.toreba.net/js/DateFormatter.js"></script>
+<script type="text/javascript">
+var _wordpress_url = 'http://www.toreba.net/info/get_wp/?type=english';	$(function() {
+		$.get(_wordpress_url, { t: 'top_info', tag: 'english' }, show_infomation, 'json');	
+		$("#info_tab li").click(function(){								$("#info_box ul").css("display", "none")
+			var target_name = $(this).attr("class");
+			$("#info_" + target_name).css("display", "block");
+			$("#info_tab li a").removeClass("current");
+			$("a",this).addClass("current");
+		});
+		$("#info_box li").click(function(){
+			if($(this).attr("href") != undefined) {
+				window.top.location.href = $(this).attr("href");
+			}
+		});
+	});
+
+		function show_infomation(res) {
+		$.each(res, function(category, infos) {
+			var cat_str = {'all': 'all', 'info_news' : 'news', 'info_prize' : 'prize'};
+
+			$.each(infos, function(i, info) {
+				var category_name = ((info.category == 'info_prize') ? "Prize" : "Info");
+				var category_id = ((info.category == 'info_prize') ? '2' : '1');
+				var cat = '';
+				var info_date = new Date(info.date);
+
+				if (typeof(cat_str[category]) == 'undefined') {
+					cat = category;
+				} else {
+					cat = cat_str[category];
+				}
+
+								$('#info_dummy_lh').clone().attr('id', 'topic_' + cat + '_' +  info.id)
+				.find('.url').attr('href', info.url)
+				.append('<p class="icon' + category_id + '">' + category_name + '</p>' + DateFormatter.format(info_date, "Y/m/d") + ' ' + info.title).end()
+				.appendTo('#info_' + cat);
+			});
+		});
+		$('#info_dummy_lh').remove();
+			}
+</script>
+<script>
+	$(function(){
+		$("#footer h2").on("click", function() {
+			$("#info_area").slideToggle();
+			$("#info_area").toggleClass("active");
+		});
+	});
+</script>
+<footer id="wrap_footer" class="area p10">
+	<div id="footer">
+		<h2>Information</h2>
+		<div id="info_area" class="clearfix" style="display: none;">
+			<div id="info_tab">
+				<ul>
+				<li class="all"><a class="current">Latest Information</a></li>
+				<li class="news"><a>Important Notice</a></li>
+				<li class="prize"><a>New Prizes</a></li>
+				<li class="service"><a>Current Prizes</a></li>
+				</ul>
+			</div>
+
+			<div id="info_box">
+				<ul id="info_all">
+					<li id="info_dummy_lh">
+						<a href="" class="url"></a>
+					</li>
+				</ul>
+				<ul id="info_news">
+				</ul>
+				<ul id="info_prize">
+				</ul>
+				<ul id="info_service">
+					<li href="http://www.toreba.net/play/select/36002"><p class="icon3">Available</p>Squishy Soft Rolling Birds [toreba 3rd-F 02号機]</li>
+					<li href="http://www.toreba.net/play/select/36001"><p class="icon3">Available</p>Squishy Soft Rolling Birds [toreba 3rd-F 01号機]</li>
+					<li href="http://www.toreba.net/play/select/34017"><p class="icon3">Available</p>tyGEAR - Coin Purse [toreba 3rd-D 17号機]</li>
+					<li href="http://www.toreba.net/play/select/34016"><p class="icon3">Available</p>tyGEAR - Coin Purse [toreba 3rd-D 16号機]</li>
+					<li href="http://www.toreba.net/play/select/32021"><p class="icon3">Available</p>Crayon Shin-chan - Big Plushy [toreba 3rd-B 21号機]</li>
+					<li href="http://www.toreba.net/play/select/32020"><p class="icon3">Available</p>Crayon Shin-chan - Big Plushy [toreba 3rd-B 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420912"><p class="icon3">Available</p>Osomatsu-san - Osomastu Lying Down Plushy - Mega Jumbo [toreba 4th2-I 12号機]</li>
+					<li href="http://www.toreba.net/play/select/32019"><p class="icon3">Available</p>Crayon Shin-chan - Big Plushy [toreba 3rd-B 19号機]</li>
+					<li href="http://www.toreba.net/play/select/35016"><p class="icon3">Available</p>Minions - High Quality Plushy L Ver. 2 [toreba 3rd-E 16号機]</li>
+					<li href="http://www.toreba.net/play/select/35015"><p class="icon3">Available</p>Minions - High Quality Plushy L Ver. 2 [toreba 3rd-E 15号機]</li>
+					<li href="http://www.toreba.net/play/select/32006"><p class="icon3">Available</p>HUGtto! PreCure - Hugging Pillow (75 x 35 cm) [toreba 3rd-B 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420911"><p class="icon3">Available</p>Star Wars - Palpatine - 1/10 Scale Premium Figure [toreba 4th2-I 11号機]</li>
+					<li href="http://www.toreba.net/play/select/2004"><p class="icon3">Available</p>Mameshiba Siblings - BIG [toreba-S 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410807"><p class="icon3">Available</p>Snoopy - Partitioned Tote Bag [toreba 4th1-H 07号機]</li>
+					<li href="http://www.toreba.net/play/select/2014"><p class="icon3">Available</p>Love Live! Sunshine!! - Lying Down Plushy &quot;2nd Grader - MIRACLE WAVE&quot; [toreba-S 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420413"><p class="icon3">Available</p>Yurukawa Sanrio Characters Cinnamon Roll Giga Jumbo Big Face Plushy [toreba 4th2-D 13号機]</li>
+					<li href="http://www.toreba.net/play/select/410117"><p class="icon3">Available</p>Disney - Marshmallow Laying Plushy 2 [toreba 4th1-A 17号機]</li>
+					<li href="http://www.toreba.net/play/select/410316"><p class="icon3">Available</p>Pocket Monsters Sun &amp; Moon Huge Bebevenome Plush Doll [toreba 4th1-C 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410518"><p class="icon3">Available</p>Dragon Quest AM Figure Light Slime &amp; She-Slime [toreba 4th1-E 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410610"><p class="icon3">Available</p>Rascal - Plushy with Sound (Blushing) [toreba 4th1-F 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410718"><p class="icon3">Available</p>Marvel Comics - Black Tumbler (5 styles) [toreba 4th1-G 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410123"><p class="icon3">Available</p>Anpanman - Umbrella (45 cm) [toreba 4th1-A 23号機]</li>
+					<li href="http://www.toreba.net/play/select/410708"><p class="icon3">Available</p>Hello Kitty - Die Cut Plate Assortment [toreba 4th1-G 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420914"><p class="icon3">Available</p>Pop Team Epic - T-Shirt 2  [toreba 4th2-I 14号機]</li>
+					<li href="http://www.toreba.net/play/select/2013"><p class="icon3">Available</p>Super Sonico - Anniversary Figure Super Sonico-san (31) [toreba-S 13号機]</li>
+					<li href="http://www.toreba.net/play/select/32026"><p class="icon3">Available</p>Hello Kitty - Mega Jumbo Apple Plushy w/ Ribbon [toreba 3rd-B 26号機]</li>
+					<li href="http://www.toreba.net/play/select/32025"><p class="icon3">Available</p>Hello Kitty - Mega Jumbo Apple Plushy w/ Ribbon [toreba 3rd-B 25号機]</li>
+					<li href="http://www.toreba.net/play/select/410407"><p class="icon3">Available</p>Princess Memories Face Towel 1P Gift [toreba 4th1-D 07号機]</li>
+					<li href="http://www.toreba.net/play/select/32023"><p class="icon3">Available</p>Hello Kitty - Mega Jumbo Apple Plushy w/ Ribbon [toreba 3rd-B 23号機]</li>
+					<li href="http://www.toreba.net/play/select/32024"><p class="icon3">Available</p>Hello Kitty - Mega Jumbo Apple Plushy w/ Ribbon [toreba 3rd-B 24号機]</li>
+					<li href="http://www.toreba.net/play/select/36007"><p class="icon3">Available</p>Toy Story - Space Color Backpack [toreba 3rd-F 07号機]</li>
+					<li href="http://www.toreba.net/play/select/36008"><p class="icon3">Available</p>Toy Story - Space Color Backpack [toreba 3rd-F 08号機]</li>
+					<li href="http://www.toreba.net/play/select/34013"><p class="icon3">Available</p>Curling Game [toreba 3rd-D 13号機]</li>
+					<li href="http://www.toreba.net/play/select/36021"><p class="icon3">Available</p>My Melody - Lovely Lace Big Plushy [toreba 3rd-F 21号機]</li>
+					<li href="http://www.toreba.net/play/select/410126"><p class="icon3">Available</p>Animals - Lunch Plate Set [toreba 4th1-A 26号機]</li>
+					<li href="http://www.toreba.net/play/select/36020"><p class="icon3">Available</p>My Melody - Lovely Lace Big Plushy [toreba 3rd-F 20号機]</li>
+					<li href="http://www.toreba.net/play/select/36018"><p class="icon3">Available</p>My Melody - Lovely Lace Big Plushy [toreba 3rd-F 18号機]</li>
+					<li href="http://www.toreba.net/play/select/36019"><p class="icon3">Available</p>My Melody - Lovely Lace Big Plushy [toreba 3rd-F 19号機]</li>
+					<li href="http://www.toreba.net/play/select/36022"><p class="icon3">Available</p>My Melody - Lovely Lace Big Plushy [toreba 3rd-F 22号機]</li>
+					<li href="http://www.toreba.net/play/select/33020"><p class="icon3">Available</p>Dragon Ball Super - Soft Pouch for Switch [toreba 3rd-C 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420309"><p class="icon3">Available</p>Rascal - Velvet Fleece Face Cushion [toreba 4th2-C 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410128"><p class="icon3">Available</p>Awahige Beer 2-type Assortment [toreba 4th1-A 28号機]</li>
+					<li href="http://www.toreba.net/play/select/2015"><p class="icon3">Available</p>Girls und Panzer das Finale x Pacific Racing Team - Acrylic Stand Mascot  [toreba-S 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420204"><p class="icon3">Available</p>Sumikkogurashi Piano with Metallophone [toreba 4th2-B 04号機]</li>
+					<li href="http://www.toreba.net/play/select/420320"><p class="icon3">Available</p>Mini Partitioned Tote [toreba 4th2-C 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410217"><p class="icon3">Available</p>Kirby - Fluffy Big Plushy [toreba 4th1-B 17号機]</li>
+					<li href="http://www.toreba.net/play/select/35026"><p class="icon3">Available</p>Rilakkuma - Kiirotori - Premium XL Plushy [toreba 3rd-E 26号機]</li>
+					<li href="http://www.toreba.net/play/select/35024"><p class="icon3">Available</p>Rilakkuma - Kiirotori - Premium XL Plushy [toreba 3rd-E 24号機]</li>
+					<li href="http://www.toreba.net/play/select/33024"><p class="icon3">Available</p>Sumikkogurashi - Slim Pen Pouch (Bukatsu Series) [toreba 3rd-C 24号機]</li>
+					<li href="http://www.toreba.net/play/select/35025"><p class="icon3">Available</p>Rilakkuma - Kiirotori - Premium XL Plushy [toreba 3rd-E 25号機]</li>
+					<li href="http://www.toreba.net/play/select/2049"><p class="icon3">Available</p>Star Wars: The Last Jedi - Porg Mega Jumbo Plush Doll [toreba-S 49号機]</li>
+					<li href="http://www.toreba.net/play/select/410711"><p class="icon3">Available</p>Sumikkogurashi Face Drum Cushion Part 2 [toreba 4th1-G 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410104"><p class="icon3">Available</p>Mitchiri Neko - Premium Bath Towel [toreba 4th1-A 04号機]</li>
+					<li href="http://www.toreba.net/play/select/2003"><p class="icon3">Available</p>Reversible Plushy 3 Types [toreba-S 03号機]</li>
+					<li href="http://www.toreba.net/play/select/420607"><p class="icon3">Available</p>Bath Tsuball [toreba 4th2-F 07号機]</li>
+					<li href="http://www.toreba.net/play/select/34015"><p class="icon3">Available</p>Web Runner Ball 2 [toreba 3rd-D 15号機]</li>
+					<li href="http://www.toreba.net/play/select/35020"><p class="icon3">Available</p>Disney Soft Pouch [toreba 3rd-E 20号機]</li>
+					<li href="http://www.toreba.net/play/select/421008"><p class="icon3">Available</p>Disney - Plushy Costume [toreba 4th2-J 08号機]</li>
+					<li href="http://www.toreba.net/play/select/2028"><p class="icon3">Available</p>Disney Princess - Long Tumbler 400ml [toreba-S 28号機]</li>
+					<li href="http://www.toreba.net/play/select/410612"><p class="icon3">Available</p>Marumofubiyori - Big Plushy [toreba 4th1-F 12号機]</li>
+					<li href="http://www.toreba.net/play/select/36027"><p class="icon3">Available</p>Simple+Life - Handy Hot Sand Maker [toreba 3rd-F 27号機]</li>
+					<li href="http://www.toreba.net/play/select/36028"><p class="icon3">Available</p>Simple+Life - Handy Hot Sand Maker [toreba 3rd-F 28号機]</li>
+					<li href="http://www.toreba.net/play/select/410203"><p class="icon3">Available</p>FANS - XL Finger Pointing Plushy [toreba 4th1-B 03号機]</li>
+					<li href="http://www.toreba.net/play/select/36026"><p class="icon3">Available</p>Simple+Life - Handy Hot Sand Maker [toreba 3rd-F 26号機]</li>
+					<li href="http://www.toreba.net/play/select/410519"><p class="icon3">Available</p>Mickey &amp; Minnie - Premium Pair Glasses Ver. 2 [toreba 4th1-E 19号機]</li>
+					<li href="http://www.toreba.net/play/select/35008"><p class="icon3">Available</p>Disney Princess - Dustbox [toreba 3rd-E 08号機]</li>
+					<li href="http://www.toreba.net/play/select/35009"><p class="icon3">Available</p>Disney Princess - Dustbox [toreba 3rd-E 09号機]</li>
+					<li href="http://www.toreba.net/play/select/35007"><p class="icon3">Available</p>Disney Princess - Dustbox [toreba 3rd-E 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420316"><p class="icon3">Available</p>HOME MADE Handy Crepe Maker [toreba 4th2-C 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410511"><p class="icon3">Available</p>Hello Kitty - Folded Eco Bag [toreba 4th1-E 11号機]</li>
+					<li href="http://www.toreba.net/play/select/2025"><p class="icon3">Available</p>Crayon Shin-chan - Harajuku Acrylic Keyholder [toreba-S 25号機]</li>
+					<li href="http://www.toreba.net/play/select/410315"><p class="icon3">Available</p>Pompompurin - Premium USB Aroma Freshener [toreba 4th1-C 15号機]</li>
+					<li href="http://www.toreba.net/play/select/2058"><p class="icon3">Available</p>Assembly Pretend Series [toreba-S 58号機]</li>
+					<li href="http://www.toreba.net/play/select/2078"><p class="icon3">Available</p>The Disappearance of Nagato Yuki-chan - Bath Towel [toreba-S 78号機]</li>
+					<li href="http://www.toreba.net/play/select/420910"><p class="icon3">Available</p>Oyasumi Chiffon - Hugging Pillow (Duck) [toreba 4th2-I 10号機]</li>
+					<li href="http://www.toreba.net/play/select/33005"><p class="icon3">Available</p>Hatsune Miku - Project Diva Arcade Future Tone Super Premium Figure &quot;CA Hatsune Miku&quot; [toreba 3rd-C 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410812"><p class="icon3">Available</p>Heat-resistant Glass Steamer [toreba 4th1-H 12号機]</li>
+					<li href="http://www.toreba.net/play/select/33006"><p class="icon3">Available</p>Hatsune Miku - Project Diva Arcade Future Tone Super Premium Figure &quot;CA Hatsune Miku&quot; [toreba 3rd-C 06号機]</li>
+					<li href="http://www.toreba.net/play/select/33003"><p class="icon3">Available</p>Hatsune Miku - Project Diva Arcade Future Tone Super Premium Figure &quot;CA Hatsune Miku&quot; [toreba 3rd-C 03号機]</li>
+					<li href="http://www.toreba.net/play/select/33004"><p class="icon3">Available</p>Hatsune Miku - Project Diva Arcade Future Tone Super Premium Figure &quot;CA Hatsune Miku&quot; [toreba 3rd-C 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410106"><p class="icon3">Available</p>Ted 2 - Red Tanktop Sitting Down Plushy XL Premium [toreba 4th1-A 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410917"><p class="icon3">Available</p>Snoopy x Sushi - Soba Choko [toreba 4th1-I 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420108"><p class="icon3">Available</p>Mickey Mouse - Premium Relief Wall Clock [toreba 4th2-A 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420613"><p class="icon3">Available</p>Girls und Panzer Der Film - UFO Catcher Connectable Mini Cushion [toreba 4th2-F 13号機]</li>
+					<li href="http://www.toreba.net/play/select/2069"><p class="icon3">Available</p>Star Wars - BB-8 Premium Drum Box [toreba-S 69号機]</li>
+					<li href="http://www.toreba.net/play/select/410125"><p class="icon3">Available</p>Gudetama - Mug Cup w/ Spoon [toreba 4th1-A 25号機]</li>
+					<li href="http://www.toreba.net/play/select/420123"><p class="icon3">Available</p>Snoopy Canvas Tote with Divider [toreba 4th2-A 23号機]</li>
+					<li href="http://www.toreba.net/play/select/31024"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 24号機]</li>
+					<li href="http://www.toreba.net/play/select/31025"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 25号機]</li>
+					<li href="http://www.toreba.net/play/select/31023"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 23号機]</li>
+					<li href="http://www.toreba.net/play/select/410713"><p class="icon3">Available</p>Ensemble Stars! - Deco Badge Keyholder -fine &amp; Valkyrie &amp; Akatsuki-  [toreba 4th1-G 13号機]</li>
+					<li href="http://www.toreba.net/play/select/31027"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 27号機]</li>
+					<li href="http://www.toreba.net/play/select/31026"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 26号機]</li>
+					<li href="http://www.toreba.net/play/select/31022"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 22号機]</li>
+					<li href="http://www.toreba.net/play/select/31018"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 18号機]</li>
+					<li href="http://www.toreba.net/play/select/31019"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 19号機]</li>
+					<li href="http://www.toreba.net/play/select/31021"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 21号機]</li>
+					<li href="http://www.toreba.net/play/select/420203"><p class="icon3">Available</p>Doraemon - Mug w/ Wooden Spoon (Secret Tools, Polka Dot) [toreba 4th2-B 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410920"><p class="icon3">Available</p>Rilakkuma - Face-up Premium Plushy (part 2) [toreba 4th1-I 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420702"><p class="icon3">Available</p>Faithful Mochishiba - Sharing the Happiness BIG [toreba 4th2-G 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420703"><p class="icon3">Available</p>Faithful Mochishiba - Sharing the Happiness BIG [toreba 4th2-G 03号機]</li>
+					<li href="http://www.toreba.net/play/select/420508"><p class="icon3">Available</p>Jump 50th Anniversary - Anniversary Figure ~Kinnikuman~ [toreba 4th2-E 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410212"><p class="icon3">Available</p>Spider-Man: Homecoming Premium 1/10 Scale Figure [toreba 4th1-B 12号機]</li>
+					<li href="http://www.toreba.net/play/select/410714"><p class="icon3">Available</p>Disney Princess Long Wallet [toreba 4th1-G 14号機]</li>
+					<li href="http://www.toreba.net/play/select/410213"><p class="icon3">Available</p>Pyramid (Tea for One) [toreba 4th1-B 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420504"><p class="icon3">Available</p>Crayon Shinchan - Gusseted Bag (Lettering) [toreba 4th2-E 04号機]</li>
+					<li href="http://www.toreba.net/play/select/2009"><p class="icon3">Available</p>Doraemon - Easter Big Plushy [toreba-S 09号機]</li>
+					<li href="http://www.toreba.net/play/select/2010"><p class="icon3">Available</p>Yosshi Stamp - Super Big Plushy [toreba-S 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410614"><p class="icon3">Available</p>Kinsmart No. 200 Series [toreba 4th1-F 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420119"><p class="icon3">Available</p>Alice - Floral Glitter Mug [toreba 4th2-A 19号機]</li>
+					<li href="http://www.toreba.net/play/select/2062"><p class="icon3">Available</p>Shin Megami Tensei 25th Anniversary - Fastener Wallet [toreba-S 62号機]</li>
+					<li href="http://www.toreba.net/play/select/410604"><p class="icon3">Available</p>Tinkerbell Canvas Lunch Tote [toreba 4th1-F 04号機]</li>
+					<li href="http://www.toreba.net/play/select/2052"><p class="icon3">Available</p>Pokemon - Life with PIKACHU Big Plushy [toreba-S 52号機]</li>
+					<li href="http://www.toreba.net/play/select/2051"><p class="icon3">Available</p>Pokemon - Life with PIKACHU Big Plushy [toreba-S 51号機]</li>
+					<li href="http://www.toreba.net/play/select/2039"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Take Me with You Plushy ~Pikachu, Bulbasaur, Charmander, Squirtle~ [toreba-S 39号機]</li>
+					<li href="http://www.toreba.net/play/select/2075"><p class="icon3">Available</p>Ariel - Wall Pocket [toreba-S 75号機]</li>
+					<li href="http://www.toreba.net/play/select/2002"><p class="icon3">Available</p>Stackable Comic &amp; CD Locker [toreba-S 02号機]</li>
+					<li href="http://www.toreba.net/play/select/2031"><p class="icon3">Available</p>Mickey &amp; Minnie - Love♥Love Series ~Premium Chocolate Fountain [toreba-S 31号機]</li>
+					<li href="http://www.toreba.net/play/select/420411"><p class="icon3">Available</p>Sauna Suits [toreba 4th2-D 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410220"><p class="icon3">Available</p>Pokemon Mug w/ Spoon [toreba 4th1-B 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410602"><p class="icon3">Available</p>FANS - Soft Naan Cushion [toreba 4th1-F 02号機]</li>
+					<li href="http://www.toreba.net/play/select/410517"><p class="icon3">Available</p>Dragon Quest Soft Vinyl Assortment [toreba 4th1-E 17号機]</li>
+					<li href="http://www.toreba.net/play/select/410320"><p class="icon3">Available</p>The Kubikiri Cycle Premium Figure - Tomo Kunagisa [toreba 4th1-C 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420126"><p class="icon3">Available</p>Minions - Rolling Plush Backpack [toreba 4th2-A 26号機]</li>
+					<li href="http://www.toreba.net/play/select/35012"><p class="icon3">Available</p>Character Assortment Cooler Big Tote Bag [toreba 3rd-E 12号機]</li>
+					<li href="http://www.toreba.net/play/select/32001"><p class="icon3">Available</p>Osomatsu-san - Smooth Board Vol. 1 [toreba 3rd-B 01号機]</li>
+					<li href="http://www.toreba.net/play/select/2074"><p class="icon3">Available</p>Crayon Shinchan - Shiro Cute BIG Plushy [toreba-S 74号機]</li>
+					<li href="http://www.toreba.net/play/select/34001"><p class="icon3">Available</p>Cute Minion Pouch Backpack (Denim) Ver. 2 [toreba 3rd-D 01号機]</li>
+					<li href="http://www.toreba.net/play/select/34002"><p class="icon3">Available</p>Kemono Friends - UFO Catcher Acrylic Keychain Mascot [toreba 3rd-D 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420502"><p class="icon3">Available</p>Fluffy Snoopy Sewn Pillow [toreba 4th2-E 02号機]</li>
+					<li href="http://www.toreba.net/play/select/2073"><p class="icon3">Available</p>Marshmallow Animal - Bolster (Bubble) [toreba-S 73号機]</li>
+					<li href="http://www.toreba.net/play/select/410206"><p class="icon3">Available</p>Rilakkuma - Face-shaped Balloon Bag [toreba 4th1-B 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420604"><p class="icon3">Available</p>Mickey &amp; Donald Canvas Tote with Divider [toreba 4th2-F 04号機]</li>
+					<li href="http://www.toreba.net/play/select/32011"><p class="icon3">Available</p>Chihayafuru - Mascot Plushy [toreba 3rd-B 11号機]</li>
+					<li href="http://www.toreba.net/play/select/2026"><p class="icon3">Available</p>Dynamic Chord - Goods Set A [toreba-S 26号機]</li>
+					<li href="http://www.toreba.net/play/select/420305"><p class="icon3">Available</p>Sumikkogurashi - Adhesive Tape-style Cleaner [toreba 4th2-C 05号機]</li>
+					<li href="http://www.toreba.net/play/select/411016"><p class="icon3">Available</p>Sumikkogurashi - Big Die-cut mat [toreba 4th1-J 16号機]</li>
+					<li href="http://www.toreba.net/play/select/2024"><p class="icon3">Available</p>Tomica - Waist Pouch [toreba-S 24号機]</li>
+					<li href="http://www.toreba.net/play/select/410313"><p class="icon3">Available</p>Disney - Paper Humidifier (Dress) [toreba 4th1-C 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420206"><p class="icon3">Available</p>Rapunzel - Floral Glitter Mug [toreba 4th2-B 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410105"><p class="icon3">Available</p>Snoopy - Big New Lying Down Plushy [toreba 4th1-A 05号機]</li>
+					<li href="http://www.toreba.net/play/select/2037"><p class="icon3">Available</p>Mickey Mouse - Face Bag Ver. 3 [toreba-S 37号機]</li>
+					<li href="http://www.toreba.net/play/select/420501"><p class="icon3">Available</p>Wonder Dog &amp; Cat Mascot w/ Ball Chain [toreba 4th2-E 01号機]</li>
+					<li href="http://www.toreba.net/play/select/2040"><p class="icon3">Available</p>Marshmallow Aquamie - Bolster (Shark) [toreba-S 40号機]</li>
+					<li href="http://www.toreba.net/play/select/2035"><p class="icon3">Available</p>Disney - Princess Outing Shoulder Bag [toreba-S 35号機]</li>
+					<li href="http://www.toreba.net/play/select/31010"><p class="icon3">Available</p>Despicable Me - Kitchen Mat Ver. 3 [toreba 3rd-A 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410901"><p class="icon3">Available</p>Chip &amp; Dale - Gold Mug [toreba 4th1-I 01号機]</li>
+					<li href="http://www.toreba.net/play/select/2063"><p class="icon3">Available</p>Disney Pixar - Manmaru Mashiro Plush Doll [toreba-S 63号機]</li>
+					<li href="http://www.toreba.net/play/select/2068"><p class="icon3">Available</p>Princess - Kids Sewing Machine [toreba-S 68号機]</li>
+					<li href="http://www.toreba.net/play/select/2041"><p class="icon3">Available</p>Smiling Munchkin - BIG [toreba-S 41号機]</li>
+					<li href="http://www.toreba.net/play/select/33013"><p class="icon3">Available</p>Mameshiba Siblings - Trembling Gimmick [toreba 3rd-C 13号機]</li>
+					<li href="http://www.toreba.net/play/select/34021"><p class="icon3">Available</p>Love Live! Sunshine!! - Cable Pouch [toreba 3rd-D 21号機]</li>
+					<li href="http://www.toreba.net/play/select/32013"><p class="icon3">Available</p>Disney Characters - Story Book Motive Mascot [toreba 3rd-B 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420213"><p class="icon3">Available</p>Ted 2 - Huggable Plushy [toreba 4th2-B 13号機]</li>
+					<li href="http://www.toreba.net/play/select/2059"><p class="icon3">Available</p>Love Live! Sunshine!! - Premium Wall Clock Vol. 4 [toreba-S 59号機]</li>
+					<li href="http://www.toreba.net/play/select/32007"><p class="icon3">Available</p>Minions - Cupcake Squeeze Mascot Ball Chain [toreba 3rd-B 07号機]</li>
+					<li href="http://www.toreba.net/play/select/34003"><p class="icon3">Available</p>Harry Potter - Magic Wand 5 ~Hogwarts~ [toreba 3rd-D 03号機]</li>
+					<li href="http://www.toreba.net/play/select/33015"><p class="icon3">Available</p>Harry Potter - Magic Wand 5 ~Hogwarts~ [toreba 3rd-C 15号機]</li>
+					<li href="http://www.toreba.net/play/select/33007"><p class="icon3">Available</p>Toyota Crown Patrol Car 1/32 Pullback Car [toreba 3rd-C 07号機]</li>
+					<li href="http://www.toreba.net/play/select/32022"><p class="icon3">Available</p>Toyota Crown Patrol Car 1/32 Pullback Car [toreba 3rd-B 22号機]</li>
+					<li href="http://www.toreba.net/play/select/410404"><p class="icon3">Available</p>RC Daihatsu Assortment [toreba 4th1-D 04号機]</li>
+					<li href="http://www.toreba.net/play/select/36029"><p class="icon3">Available</p>Snoopy - Pastel Drop Large Mascot [toreba 3rd-F 29号機]</li>
+					<li href="http://www.toreba.net/play/select/36030"><p class="icon3">Available</p>Snoopy - Pastel Drop Large Mascot [toreba 3rd-F 30号機]</li>
+					<li href="http://www.toreba.net/play/select/2016"><p class="icon3">Available</p>Crayon Shinchan - Kororon Plushy [toreba-S 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420509"><p class="icon3">Available</p>Doraemon - Squishy Copying Toast Cushion 2017 [toreba 4th2-E 09号機]</li>
+					<li href="http://www.toreba.net/play/select/31001"><p class="icon3">Available</p>Doraemon - Colored Pencil Set (50 Pcs) [toreba 3rd-A 01号機]</li>
+					<li href="http://www.toreba.net/play/select/35004"><p class="icon3">Available</p>Doraemon - Mascot Dress Towel [toreba 3rd-E 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410124"><p class="icon3">Available</p>Minions Denim Bag [toreba 4th1-A 24号機]</li>
+					<li href="http://www.toreba.net/play/select/34031"><p class="icon3">Available</p>Kemono Friends - Muffler Towel Vol. 1 [toreba 3rd-D 31号機]</li>
+					<li href="http://www.toreba.net/play/select/32003"><p class="icon3">Available</p>Character Beads Cushion (Round) [toreba 3rd-B 03号機]</li>
+					<li href="http://www.toreba.net/play/select/33026"><p class="icon3">Available</p>Watermelon Helmet [toreba 3rd-C 26号機]</li>
+					<li href="http://www.toreba.net/play/select/31009"><p class="icon3">Available</p>My Neighbor Totoro - Heat Resistant Glass Bottle [toreba 3rd-A 09号機]</li>
+					<li href="http://www.toreba.net/play/select/33025"><p class="icon3">Available</p>My Neighbor Totoro - Luncheon Mat (Delicious) [toreba 3rd-C 25号機]</li>
+					<li href="http://www.toreba.net/play/select/36024"><p class="icon3">Available</p>Sumikkogurashi - Acrylic Die Cut KC (Bukatsu Series) [toreba 3rd-F 24号機]</li>
+					<li href="http://www.toreba.net/play/select/420109"><p class="icon3">Available</p>Detective Conan - Keychain Mascot &quot;Conan &amp; Richard &amp; Amuro &amp; Kazumi&quot; [toreba 4th2-A 09号機]</li>
+					<li href="http://www.toreba.net/play/select/31003"><p class="icon3">Available</p>Minions - Big Plushy [toreba 3rd-A 03号機]</li>
+					<li href="http://www.toreba.net/play/select/2029"><p class="icon3">Available</p>Pleasant Squishy Donuts [toreba-S 29号機]</li>
+					<li href="http://www.toreba.net/play/select/420901"><p class="icon3">Available</p>He 2llo Kitty Cooler Basket 2017 [toreba 4th2-I 01号機]</li>
+					<li href="http://www.toreba.net/play/select/410209"><p class="icon3">Available</p>Rilakkuma - Happiness Daruma XL Plushy [toreba 4th1-B 09号機]</li>
+					<li href="http://www.toreba.net/play/select/2043"><p class="icon3">Available</p>Care Bears - Plushy Face-shaped Accessory Case [toreba-S 43号機]</li>
+					<li href="http://www.toreba.net/play/select/34014"><p class="icon3">Available</p>Crayon Shinchan - Cushion Mascot w/ Voice 5 Types Assortment [toreba 3rd-D 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420129"><p class="icon3">Available</p>Rilakkuma - Canvas Tote Bag k-7860A [toreba 4th2-A 29号機]</li>
+					<li href="http://www.toreba.net/play/select/32012"><p class="icon3">Available</p>Glitter Twinkle Beads Watch 3 [toreba 3rd-B 12号機]</li>
+					<li href="http://www.toreba.net/play/select/32028"><p class="icon3">Available</p>Elegant Pearl Necklace [toreba 3rd-B 28号機]</li>
+					<li href="http://www.toreba.net/play/select/420319"><p class="icon3">Available</p>Minions - Denim Smartphone Case [toreba 4th2-C 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410411"><p class="icon3">Available</p>Crayon Shin-chan - Pouch Assortment [toreba 4th1-D 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410601"><p class="icon3">Available</p>WanWan and U-Tan WanWan You Can Do It by Yourself! Plushy [toreba 4th1-F 01号機]</li>
+					<li href="http://www.toreba.net/play/select/2042"><p class="icon3">Available</p>Pote Usa Loppy - Tulle Jumbo [toreba-S 42号機]</li>
+					<li href="http://www.toreba.net/play/select/420802"><p class="icon3">Available</p>Fireworks, Should We See It from the Side or the Bottom? - Alarm Clock [toreba 4th2-H 02号機]</li>
+					<li href="http://www.toreba.net/play/select/2038"><p class="icon3">Available</p>Is The Order A Rabbit?? - Tippy&#039;s Tissue Case Cover [toreba-S 38号機]</li>
+					<li href="http://www.toreba.net/play/select/2022"><p class="icon3">Available</p>Q Posket - Disney Characters -Fantastic Time- [toreba-S 22号機]</li>
+					<li href="http://www.toreba.net/play/select/2023"><p class="icon3">Available</p>Q Posket - Disney Characters -Fantastic Time- [toreba-S 23号機]</li>
+					<li href="http://www.toreba.net/play/select/2021"><p class="icon3">Available</p>Q Posket - Disney Characters -Fantastic Time- [toreba-S 21号機]</li>
+					<li href="http://www.toreba.net/play/select/2060"><p class="icon3">Available</p>Disney - Amis de Mallow Okiagari-koboshi ~Bringing Heart Ver.~ [toreba-S 60号機]</li>
+					<li href="http://www.toreba.net/play/select/2066"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Take me With You Plushy ~Pichu, Cubone~ [toreba-S 66号機]</li>
+					<li href="http://www.toreba.net/play/select/420706"><p class="icon3">Available</p>Akashic Records of Bastard Magic Instructor - Towel with Hood [toreba 4th2-G 06号機]</li>
+					<li href="http://www.toreba.net/play/select/2065"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Take me With You Plushy ~Pichu, Cubone~ [toreba-S 65号機]</li>
+					<li href="http://www.toreba.net/play/select/410209"><p class="icon3">Available</p>Despicable Me Neck Pillow [toreba 4th1-B 09号機]</li>
+					<li href="http://www.toreba.net/play/select/2072"><p class="icon3">Available</p>Tarushiba - Spring BIG Plushy [toreba-S 72号機]</li>
+					<li href="http://www.toreba.net/play/select/410113"><p class="icon3">Available</p>Rilakkuma - Share the Mittens Die-cut Blanket [toreba 4th1-A 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420123"><p class="icon3">Available</p>Minions - Premium Bath Towel [toreba 4th2-A 23号機]</li>
+					<li href="http://www.toreba.net/play/select/2047"><p class="icon3">Available</p>Sanrio Characters - Plushy Pochette Ver. 2 [toreba-S 47号機]</li>
+					<li href="http://www.toreba.net/play/select/421001"><p class="icon3">Available</p>Palmo - Magic Hat [toreba 4th2-J 01号機]</li>
+					<li href="http://www.toreba.net/play/select/2044"><p class="icon3">Available</p>Girls und Panzer Das Finale - Panzer Four! Special Figure ~Yukari Akiyama Winter Cloth Ver.~ [toreba-S 44号機]</li>
+					<li href="http://www.toreba.net/play/select/420505"><p class="icon3">Available</p>Mini Toy Ball [toreba 4th2-E 05号機]</li>
+					<li href="http://www.toreba.net/play/select/2030"><p class="icon3">Available</p>Minion - Full Style Carabiner [toreba-S 30号機]</li>
+					<li href="http://www.toreba.net/play/select/420302"><p class="icon3">Available</p>Marvel Pop Icon Mug [toreba 4th2-C 02号機]</li>
+					<li href="http://www.toreba.net/play/select/410119"><p class="icon3">Available</p>Kumamon Panda Car Gimmick [toreba 4th1-A 19号機]</li>
+					<li href="http://www.toreba.net/play/select/2068"><p class="icon3">Available</p>Instant Cooling! Electric Can Cooler [toreba-S 68号機]</li>
+					<li href="http://www.toreba.net/play/select/410516"><p class="icon3">Available</p>Bloody Cushion [toreba 4th1-E 16号機]</li>
+					<li href="http://www.toreba.net/play/select/2011"><p class="icon3">Available</p>I Love Gangar - Super Big Plushy ~Gangar~ [toreba-S 11号機]</li>
+					<li href="http://www.toreba.net/play/select/2036"><p class="icon3">Available</p>Marshmallow Animal - Bolster (Unicorn) [toreba-S 36号機]</li>
+					<li href="http://www.toreba.net/play/select/2017"><p class="icon3">Available</p>Crayon Shinchan - Mini Towel 3 Pcs Set 2 [toreba-S 17号機]</li>
+					<li href="http://www.toreba.net/play/select/2071"><p class="icon3">Available</p>Light Up Message Board [toreba-S 71号機]</li>
+					<li href="http://www.toreba.net/play/select/2007"><p class="icon3">Available</p>Sesame Street - Cuteful Big Plushy -Elmo&#039;s Wink- [toreba-S 07号機]</li>
+					<li href="http://www.toreba.net/play/select/410121"><p class="icon3">Available</p>Minions 3D Goggle Folding Mirror [toreba 4th1-A 21号機]</li>
+					<li href="http://www.toreba.net/play/select/410818"><p class="icon3">Available</p>Minions Shuffling Gimmick [toreba 4th1-H 18号機]</li>
+					<li href="http://www.toreba.net/play/select/2032"><p class="icon3">Available</p>Pote Usa Loppy - Tulle Large Mascot [toreba-S 32号機]</li>
+					<li href="http://www.toreba.net/play/select/33008"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Premium Roller [toreba 3rd-C 08号機]</li>
+					<li href="http://www.toreba.net/play/select/2043"><p class="icon3">Available</p>Snoopy - Necklace [toreba-S 43号機]</li>
+					<li href="http://www.toreba.net/play/select/33009"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Premium Roller [toreba 3rd-C 09号機]</li>
+					<li href="http://www.toreba.net/play/select/33011"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Premium Roller [toreba 3rd-C 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410207"><p class="icon3">Available</p>Sumikkogurashi - Aluminum Frame Basket [toreba 4th1-B 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420118"><p class="icon3">Available</p>Mary and the Witch&#039;s Flower Bottle Cover [toreba 4th2-A 18号機]</li>
+					<li href="http://www.toreba.net/play/select/420714"><p class="icon3">Available</p>Yowamushi Pedal: New Generation Posing Plushy [toreba 4th2-G 14号機]</li>
+					<li href="http://www.toreba.net/play/select/410914"><p class="icon3">Available</p>Minions - Die-cut Pendulum Clock [toreba 4th1-I 14号機]</li>
+					<li href="http://www.toreba.net/play/select/34006"><p class="icon3">Available</p>Osomatsu-san 2 - Smooth Board Vol. 2 [toreba 3rd-D 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410107"><p class="icon3">Available</p>Star Wars - Premium Fleece Robe Ver. 2 [toreba 4th1-A 07号機]</li>
+					<li href="http://www.toreba.net/play/select/31020"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 6 [toreba 3rd-A 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420803"><p class="icon3">Available</p>Knyack! Squishy Plushy GJ [toreba 4th2-H 03号機]</li>
+					<li href="http://www.toreba.net/play/select/411003"><p class="icon3">Available</p>Godzilla: Planet of the Monsters - Premium Bath Towel [toreba 4th1-J 03号機]</li>
+					<li href="http://www.toreba.net/play/select/420715"><p class="icon3">Available</p>Donald Duck - Birth Memorial Mega Jumbo Plushy [toreba 4th2-G 15号機]</li>
+					<li href="http://www.toreba.net/play/select/410704"><p class="icon3">Available</p>Mameshiba Siblings - Jumbo [toreba 4th1-G 04号機]</li>
+					<li href="http://www.toreba.net/play/select/420919"><p class="icon3">Available</p>Hello Kitty Waist Pouch w/ Cap [toreba 4th2-I 19号機]</li>
+					<li href="http://www.toreba.net/play/select/420406"><p class="icon3">Available</p>Baby Panda - Sweet Pink BIG [toreba 4th2-D 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420314"><p class="icon3">Available</p>Disney - Little Kingdom Frozen Skate Rink Elsa [toreba 4th2-C 14号機]</li>
+					<li href="http://www.toreba.net/play/select/35003"><p class="icon3">Available</p>Colorful Drawing Board [toreba 3rd-E 03号機]</li>
+					<li href="http://www.toreba.net/play/select/411001"><p class="icon3">Available</p>Minions - Die-cut Flannel Blanket [toreba 4th1-J 01号機]</li>
+					<li href="http://www.toreba.net/play/select/410307"><p class="icon3">Available</p>Awesome Mega Punch Glove [toreba 4th1-C 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420312"><p class="icon3">Available</p>Mican - Plushy BIG ~Letter Ver.~ [toreba 4th2-C 12号機]</li>
+					<li href="http://www.toreba.net/play/select/410703"><p class="icon3">Available</p>Mickey &amp; Minnie - Mega Jumbo Plushy [toreba 4th1-G 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410702"><p class="icon3">Available</p>Mickey &amp; Minnie - Mega Jumbo Plushy [toreba 4th1-G 02号機]</li>
+					<li href="http://www.toreba.net/play/select/410701"><p class="icon3">Available</p>Mickey &amp; Minnie - Mega Jumbo Plushy [toreba 4th1-G 01号機]</li>
+					<li href="http://www.toreba.net/play/select/410902"><p class="icon3">Available</p>Kumamon - Sparkling Light [toreba 4th1-I 02号機]</li>
+					<li href="http://www.toreba.net/play/select/410112"><p class="icon3">Available</p>Cars 3 Premium Play Tunnel [toreba 4th1-A 12号機]</li>
+					<li href="http://www.toreba.net/play/select/410804"><p class="icon3">Available</p>Moomin Hattifatteners - Air Mascot [toreba 4th1-H 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410309"><p class="icon3">Available</p>Disney Characters - Story Book Premium Book-shaped Collection Towel 6 Pcs Set [toreba 4th1-C 09号機]</li>
+					<li href="http://www.toreba.net/play/select/2046"><p class="icon3">Available</p>Moomin - Straight Pitcher [toreba-S 46号機]</li>
+					<li href="http://www.toreba.net/play/select/410303"><p class="icon3">Available</p>Dragon Ball Super - Son Goku FES!! [toreba 4th1-C 03号機]</li>
+					<li href="http://www.toreba.net/play/select/35002"><p class="icon3">Available</p>marshmallow Cocon - Bolster (Duck) [toreba 3rd-E 02号機]</li>
+					<li href="http://www.toreba.net/play/select/410912"><p class="icon3">Available</p>Ted 2 - Silk Hat Plushy XL [toreba 4th1-I 12号機]</li>
+					<li href="http://www.toreba.net/play/select/420207"><p class="icon3">Available</p>Sumikkogurashi &amp; Rilakkuma Write-on Mug [toreba 4th2-B 07号機]</li>
+					<li href="http://www.toreba.net/play/select/410911"><p class="icon3">Available</p>Ted 2 - Silk Hat Plushy XL [toreba 4th1-I 11号機]</li>
+					<li href="http://www.toreba.net/play/select/411017"><p class="icon3">Available</p>Street Kids&#039; Skateboard [toreba 4th1-J 17号機]</li>
+					<li href="http://www.toreba.net/play/select/35001"><p class="icon3">Available</p>Detective Conan - Plushy Mascot 3 Types Assortment [toreba 3rd-E 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420303"><p class="icon3">Available</p>Little Mermaid - Large Bath Towel (Mermaid Night) [toreba 4th2-C 03号機]</li>
+					<li href="http://www.toreba.net/play/select/411009"><p class="icon3">Available</p>Godzilla: Planet of the Monsters - Plushy - Mega Jumbo [toreba 4th1-J 09号機]</li>
+					<li href="http://www.toreba.net/play/select/32016"><p class="icon3">Available</p>SWEETS Ice Candy Maker [toreba 3rd-B 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410616"><p class="icon3">Available</p>Koshikake Village VMC [toreba 4th1-F 16号機]</li>
+					<li href="http://www.toreba.net/play/select/32015"><p class="icon3">Available</p>SWEETS Ice Candy Maker [toreba 3rd-B 15号機]</li>
+					<li href="http://www.toreba.net/play/select/34027"><p class="icon3">Available</p>LED Hurricane Lantern 2 Color Assortment [toreba 3rd-D 27号機]</li>
+					<li href="http://www.toreba.net/play/select/420905"><p class="icon3">Available</p>Snoopy Beach Bag [toreba 4th2-I 05号機]</li>
+					<li href="http://www.toreba.net/play/select/34026"><p class="icon3">Available</p>LED Hurricane Lantern 2 Color Assortment [toreba 3rd-D 26号機]</li>
+					<li href="http://www.toreba.net/play/select/31030"><p class="icon3">Available</p>Sirotan - Panda Costume BIG Plushy [toreba 3rd-A 30号機]</li>
+					<li href="http://www.toreba.net/play/select/31029"><p class="icon3">Available</p>Sirotan - Panda Costume BIG Plushy [toreba 3rd-A 29号機]</li>
+					<li href="http://www.toreba.net/play/select/411010"><p class="icon3">Available</p>Minions - Squishy Banana Plushy (70cm) [toreba 4th1-J 10号機]</li>
+					<li href="http://www.toreba.net/play/select/31028"><p class="icon3">Available</p>Sirotan - Panda Costume BIG Plushy [toreba 3rd-A 28号機]</li>
+					<li href="http://www.toreba.net/play/select/34016"><p class="icon3">Available</p>Rolling Hamster Koron - Baby [toreba 3rd-D 16号機]</li>
+					<li href="http://www.toreba.net/play/select/33014"><p class="icon3">Available</p>Pochacco - Print Long Wallet [toreba 3rd-C 14号機]</li>
+					<li href="http://www.toreba.net/play/select/35019"><p class="icon3">Available</p>Rascal - Squishy Face Cushion [toreba 3rd-E 19号機]</li>
+					<li href="http://www.toreba.net/play/select/35018"><p class="icon3">Available</p>Rascal - Squishy Face Cushion [toreba 3rd-E 18号機]</li>
+					<li href="http://www.toreba.net/play/select/35017"><p class="icon3">Available</p>Rascal - Squishy Face Cushion [toreba 3rd-E 17号機]</li>
+					<li href="http://www.toreba.net/play/select/2076"><p class="icon3">Available</p>HUGtto! PreCure - 45 cm Umbrella [toreba-S 76号機]</li>
+					<li href="http://www.toreba.net/play/select/420121"><p class="icon3">Available</p>Code Geass: Lelouch of the Rebellion - EXQ Figure ~Lelouch Lamperouge~ [toreba 4th2-A 21号機]</li>
+					<li href="http://www.toreba.net/play/select/420120"><p class="icon3">Available</p>Code Geass: Lelouch of the Rebellion - EXQ Figure ~Lelouch Lamperouge~ [toreba 4th2-A 20号機]</li>
+					<li href="http://www.toreba.net/play/select/2034"><p class="icon3">Available</p>Sesame Street - Cuteful Big Plushy -Cookie Monster- [toreba-S 34号機]</li>
+					<li href="http://www.toreba.net/play/select/35029"><p class="icon3">Available</p>Rascal - Flower Mascot [toreba 3rd-E 29号機]</li>
+					<li href="http://www.toreba.net/play/select/35028"><p class="icon3">Available</p>Rascal - Flower Mascot [toreba 3rd-E 28号機]</li>
+					<li href="http://www.toreba.net/play/select/420711"><p class="icon3">Available</p>Disney Squishy Fluffy Cushion [toreba 4th2-G 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410808"><p class="icon3">Available</p>Meat! Salami &amp; Ham Cushion [toreba 4th1-H 08号機]</li>
+					<li href="http://www.toreba.net/play/select/35010"><p class="icon3">Available</p>Lazy Cat Summit - Cool Cushion [toreba 3rd-E 10号機]</li>
+					<li href="http://www.toreba.net/play/select/2061"><p class="icon3">Available</p>JoJo&#039;s Bizzare Adventure: Diamond is Unbreakable - Grandista -JOJO&#039;S FIGURE GALLERY 1- [toreba-S 61号機]</li>
+					<li href="http://www.toreba.net/play/select/35006"><p class="icon3">Available</p>Rilakkuma - Honey&#039;s Forest Harvest Festival Plushy XL [toreba 3rd-E 06号機]</li>
+					<li href="http://www.toreba.net/play/select/35005"><p class="icon3">Available</p>Rilakkuma - Honey&#039;s Forest Harvest Festival Plushy XL [toreba 3rd-E 05号機]</li>
+					<li href="http://www.toreba.net/play/select/35014"><p class="icon3">Available</p>Doraemon - Die-cut Towel 2 [toreba 3rd-E 14号機]</li>
+					<li href="http://www.toreba.net/play/select/35013"><p class="icon3">Available</p>Doraemon - Die-cut Towel 2 [toreba 3rd-E 13号機]</li>
+					<li href="http://www.toreba.net/play/select/2001"><p class="icon3">Available</p>Detective Conan - Character Round Premium Cushion &quot;Conan Edogawa&quot; [toreba-S 01号機]</li>
+					<li href="http://www.toreba.net/play/select/2064"><p class="icon3">Available</p>Smiling Munchkin [toreba-S 64号機]</li>
+					<li href="http://www.toreba.net/play/select/2056"><p class="icon3">Available</p>Hatsune Miku Series - Special Fluffy Plushy [toreba-S 56号機]</li>
+					<li href="http://www.toreba.net/play/select/420908"><p class="icon3">Available</p>Snoopy - Canvas Shoulder Bag CSTT-17 [toreba 4th2-I 08号機]</li>
+					<li href="http://www.toreba.net/play/select/31011"><p class="icon3">Available</p>marshmallow Cocon - Bolster (Pig) [toreba 3rd-A 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410905"><p class="icon3">Available</p>Dakkozuzhi Hey Wait! Real Saize Mascot Vol. 1 [toreba 4th1-I 05号機]</li>
+					<li href="http://www.toreba.net/play/select/420115"><p class="icon3">Available</p>Sword Art Online - EXQ Figure ~Yuuki~ [toreba 4th2-A 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420113"><p class="icon3">Available</p>Sword Art Online - EXQ Figure ~Yuuki~ [toreba 4th2-A 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420403"><p class="icon3">Available</p>Curious George - Lying Down Heart BIG Plushy [toreba 4th2-D 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410513"><p class="icon3">Available</p>Rilakkuma - Bamboo Plate [toreba 4th1-E 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420612"><p class="icon3">Available</p>Mickey &amp; Minnie - Premium Pair Plates [toreba 4th2-F 12号機]</li>
+					<li href="http://www.toreba.net/play/select/410520"><p class="icon3">Available</p>Girls und Panzer der Movie - Premium Figure &quot;Nishi Kinuyo&quot; [toreba 4th1-E 20号機]</li>
+					<li href="http://www.toreba.net/play/select/35023"><p class="icon3">Available</p>Natsume&#039;s Book of Friends - Big Nyanko-sensei Face-shaped Plushy [toreba 3rd-E 23号機]</li>
+					<li href="http://www.toreba.net/play/select/35022"><p class="icon3">Available</p>Natsume&#039;s Book of Friends - Big Nyanko-sensei Face-shaped Plushy [toreba 3rd-E 22号機]</li>
+					<li href="http://www.toreba.net/play/select/35021"><p class="icon3">Available</p>Natsume&#039;s Book of Friends - Big Nyanko-sensei Face-shaped Plushy [toreba 3rd-E 21号機]</li>
+					<li href="http://www.toreba.net/play/select/36010"><p class="icon3">Available</p>Bluetooth Dog Speaker [toreba 3rd-F 10号機]</li>
+					<li href="http://www.toreba.net/play/select/36009"><p class="icon3">Available</p>Bluetooth Dog Speaker [toreba 3rd-F 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410114"><p class="icon3">Available</p>Let&#039;s Enjoy Table Games! (Basketball &amp; Football) [toreba 4th1-A 14号機]</li>
+					<li href="http://www.toreba.net/play/select/410717"><p class="icon3">Available</p>Girls und Panzer Der Film - Premium Figure &quot;Nishizumi Maho - Kuromorimine Girls High School&quot; [toreba 4th1-G 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420102"><p class="icon3">Available</p>Outdoor Border pattern Long Face Towel 1P BOX (w/ wristband) [toreba 4th2-A 02号機]</li>
+					<li href="http://www.toreba.net/play/select/34025"><p class="icon3">Available</p>Electric Money Gun [toreba 3rd-D 25号機]</li>
+					<li href="http://www.toreba.net/play/select/34024"><p class="icon3">Available</p>Electric Money Gun [toreba 3rd-D 24号機]</li>
+					<li href="http://www.toreba.net/play/select/32008"><p class="icon3">Available</p>Disney Pixar - Plushy Ball Chain [toreba 3rd-B 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410502"><p class="icon3">Available</p>Usadama-chan - Lying Down Large Mascot [toreba 4th1-E 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420104"><p class="icon3">Available</p>Soreike! Anpanman Shokupanman Mega Jumbo Bread Holding Plushy [toreba 4th2-A 04号機]</li>
+					<li href="http://www.toreba.net/play/select/411014"><p class="icon3">Available</p>FANS Onigiri XL Plushy [toreba 4th1-J 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420417"><p class="icon3">Available</p>Handsome Gorilla [toreba 4th2-D 17号機]</li>
+					<li href="http://www.toreba.net/play/select/2012"><p class="icon3">Available</p>Pompompuri - Premium Trot Trot Walking Recording Plushy [toreba-S 12号機]</li>
+					<li href="http://www.toreba.net/play/select/420605"><p class="icon3">Available</p>Care Bears - Premium Soft Toy XL Cheer Bear [toreba 4th2-F 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410605"><p class="icon3">Available</p>Minion - Infinity Cube Ver. 2 [toreba 4th1-F 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410606"><p class="icon3">Available</p>Flowing Soumen -COOL- [toreba 4th1-F 06号機]</li>
+					<li href="http://www.toreba.net/play/select/31016"><p class="icon3">Available</p>Koupen-chan - Big Dorayaki Squeeze [toreba 3rd-A 16号機]</li>
+					<li href="http://www.toreba.net/play/select/31017"><p class="icon3">Available</p>Koupen-chan - Big Dorayaki Squeeze [toreba 3rd-A 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420913"><p class="icon3">Available</p>Sanrio Characters Luxury Quilt Mirror [toreba 4th2-I 13号機]</li>
+					<li href="http://www.toreba.net/play/select/33027"><p class="icon3">Available</p>Bear&#039;s Salmon - Banzai Jumbo [toreba 3rd-C 27号機]</li>
+					<li href="http://www.toreba.net/play/select/33012"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Premium Super Big Air Stool [toreba 3rd-C 12号機]</li>
+					<li href="http://www.toreba.net/play/select/2033"><p class="icon3">Available</p>Pokemon - Life with PIKACHU Plushy Tissue Case [toreba-S 33号機]</li>
+					<li href="http://www.toreba.net/play/select/410801"><p class="icon3">Available</p>Rice Cooker-shaped Humidifier ZX [toreba 4th1-H 01号機]</li>
+					<li href="http://www.toreba.net/play/select/33023"><p class="icon3">Available</p>Minions - Banana &amp; Skateboard Solar Swing Gimmick [toreba 3rd-C 23号機]</li>
+					<li href="http://www.toreba.net/play/select/33022"><p class="icon3">Available</p>Minions - Banana &amp; Skateboard Solar Swing Gimmick [toreba 3rd-C 22号機]</li>
+					<li href="http://www.toreba.net/play/select/33021"><p class="icon3">Available</p>Minions - Banana &amp; Skateboard Solar Swing Gimmick [toreba 3rd-C 21号機]</li>
+					<li href="http://www.toreba.net/play/select/420311"><p class="icon3">Available</p>Ariel - Floral Glitter Mug [toreba 4th2-C 11号機]</li>
+					<li href="http://www.toreba.net/play/select/35032"><p class="icon3">Available</p>Fricition Limousine Pearly Night [toreba 3rd-E 32号機]</li>
+					<li href="http://www.toreba.net/play/select/35031"><p class="icon3">Available</p>Fricition Limousine Pearly Night [toreba 3rd-E 31号機]</li>
+					<li href="http://www.toreba.net/play/select/410418"><p class="icon3">Available</p>Sumikkogurashi - Sumikkugorashi Sweets Shop [toreba 4th1-D 18号機]</li>
+					<li href="http://www.toreba.net/play/select/2005"><p class="icon3">Available</p>Minions - Square Cushion w/ Arms [toreba-S 05号機]</li>
+					<li href="http://www.toreba.net/play/select/420408"><p class="icon3">Available</p>Doraemon - Premium Electric Planetarium [toreba 4th2-D 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420410"><p class="icon3">Available</p>Doraemon - Premium Electric Planetarium [toreba 4th2-D 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410607"><p class="icon3">Available</p>Disney Characters - Premium Soup Cup Set [toreba 4th1-F 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420418"><p class="icon3">Available</p>Mike Wazowski - Mega Jumbo Red Cheek Fluffy Shy Plushy Chibi Ver. [toreba 4th2-D 18号機]</li>
+					<li href="http://www.toreba.net/play/select/420419"><p class="icon3">Available</p>Mike Wazowski - Mega Jumbo Red Cheek Fluffy Shy Plushy Chibi Ver. [toreba 4th2-D 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410619"><p class="icon3">Available</p>Totoro - Stainless Outdoor Bottle 750 ml [toreba 4th1-F 19号機]</li>
+					<li href="http://www.toreba.net/play/select/420620"><p class="icon3">Available</p>Wild! Animal Friction Bike [toreba 4th2-F 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410129"><p class="icon3">Available</p>Yuniko Assembly Storage BOX [toreba 4th1-A 29号機]</li>
+					<li href="http://www.toreba.net/play/select/31008"><p class="icon3">Available</p>Minion Overall Tote Bag 2 [toreba 3rd-A 08号機]</li>
+					<li href="http://www.toreba.net/play/select/31015"><p class="icon3">Available</p>Ribbon Snoopy Big Plushy [toreba 3rd-A 15号機]</li>
+					<li href="http://www.toreba.net/play/select/34020"><p class="icon3">Available</p>Barbapapa - Glass [toreba 3rd-D 20号機]</li>
+					<li href="http://www.toreba.net/play/select/2055"><p class="icon3">Available</p>Final Fantasy XV - Super Big Plushy Moogle &amp; Kenny Crow [toreba-S 55号機]</li>
+					<li href="http://www.toreba.net/play/select/420916"><p class="icon3">Available</p>Design Frame 40cm [toreba 4th2-I 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410318"><p class="icon3">Available</p>Princess - Round Towel [toreba 4th1-C 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410312"><p class="icon3">Available</p>Dragon Quest AM Small Plushy [toreba 4th1-C 12号機]</li>
+					<li href="http://www.toreba.net/play/select/410611"><p class="icon3">Available</p>Sumikkogurashi - Canvas Tote Bag w/ Fastener k-7846A [toreba 4th1-F 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410420"><p class="icon3">Available</p>Hello Kitty - Medium Plate [toreba 4th1-D 20号機]</li>
+					<li href="http://www.toreba.net/play/select/34011"><p class="icon3">Available</p>Sumikkogurashi - Sumikko-bentou Lunch Plate [toreba 3rd-D 11号機]</li>
+					<li href="http://www.toreba.net/play/select/34010"><p class="icon3">Available</p>Sumikkogurashi - Sumikko-bentou Lunch Plate [toreba 3rd-D 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410416"><p class="icon3">Available</p>Minions - Cutlery Set [toreba 4th1-D 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420717"><p class="icon3">Available</p>Minions - Premium Electric Car &amp; Course Set [toreba 4th2-G 17号機]</li>
+					<li href="http://www.toreba.net/play/select/410706"><p class="icon3">Available</p>TV anime &quot;Lion in March&quot; Shogi meow mascot Vol. 2 [toreba 4th1-G 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420105"><p class="icon3">Available</p>Shiba Inu Maru die cut face cushion [toreba 4th2-A 05号機]</li>
+					<li href="http://www.toreba.net/play/select/33002"><p class="icon3">Available</p>Crayon Shinchan - Big Plushy ~Shiro&#039;s On Off~ [toreba 3rd-C 02号機]</li>
+					<li href="http://www.toreba.net/play/select/2067"><p class="icon3">Available</p>Pokemon - Canvas Bag (Pikachu Up) [toreba-S 67号機]</li>
+					<li href="http://www.toreba.net/play/select/2027"><p class="icon3">Available</p>Coca-Cola - Silicon Watch Metallic Ver. 3 [toreba-S 27号機]</li>
+					<li href="http://www.toreba.net/play/select/420217"><p class="icon3">Available</p>Minions Maid - Premium Roller [toreba 4th2-B 17号機]</li>
+					<li href="http://www.toreba.net/play/select/410515"><p class="icon3">Available</p>Minions - Denim Clasp Shoulder Bag [toreba 4th1-E 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420710"><p class="icon3">Available</p>Clear Tumbler 6-piece Set [toreba 4th2-G 10号機]</li>
+					<li href="http://www.toreba.net/play/select/34012"><p class="icon3">Available</p>Character Bath Towel [toreba 3rd-D 12号機]</li>
+					<li href="http://www.toreba.net/play/select/410811"><p class="icon3">Available</p>Hello Kitty - Long Umbrella (Girly Room &amp; Little Lady) [toreba 4th1-H 11号機]</li>
+					<li href="http://www.toreba.net/play/select/420415"><p class="icon3">Available</p>Touhou Project - Original Headphones [toreba 4th2-D 15号機]</li>
+					<li href="http://www.toreba.net/play/select/2006"><p class="icon3">Available</p>Rilakkuma - Rilakkuma Bakery: Enamel Two Handed Pot with Lid [toreba-S 06号機]</li>
+					<li href="http://www.toreba.net/play/select/2070"><p class="icon3">Available</p>Chip &amp; Dale - Mega Jumbo Cool Taste Hugging Plushy [toreba-S 70号機]</li>
+					<li href="http://www.toreba.net/play/select/410510"><p class="icon3">Available</p>ufurl Rotatable Neck Washable Ladies Shaver [toreba 4th1-E 10号機]</li>
+					<li href="http://www.toreba.net/play/select/2077"><p class="icon3">Available</p>Hatsune Miku x Rascal - Music! Plushy [toreba-S 77号機]</li>
+					<li href="http://www.toreba.net/play/select/33001"><p class="icon3">Available</p>Disney - Long Clasp Pouch Ball Chain [toreba 3rd-C 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420606"><p class="icon3">Available</p>IDOLiSH7 - DXF Figure Vol. 5 [toreba 4th2-F 06号機]</li>
+					<li href="http://www.toreba.net/play/select/421009"><p class="icon3">Available</p>Rilakkuma Leather Sofa-shaped Tissue Case Cover [toreba 4th2-J 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410109"><p class="icon3">Available</p>Disney Soft Round Cushion [toreba 4th1-A 09号機]</li>
+					<li href="http://www.toreba.net/play/select/32018"><p class="icon3">Available</p>Crayon Shin-chan - Crayon Touch Acrylic Keyholder [toreba 3rd-B 18号機]</li>
+					<li href="http://www.toreba.net/play/select/420707"><p class="icon3">Available</p>Big My Hug Teddy 3 [toreba 4th2-G 07号機]</li>
+					<li href="http://www.toreba.net/play/select/411013"><p class="icon3">Available</p>SameZ - Plushy XL Premium Megalodon [toreba 4th1-J 13号機]</li>
+					<li href="http://www.toreba.net/play/select/411004"><p class="icon3">Available</p>Round Bear Polar Circus BIG [toreba 4th1-J 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410405"><p class="icon3">Available</p>Center Point Tote Bag [toreba 4th1-D 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410719"><p class="icon3">Available</p>KRUNK x BIG BANG FXXK IT Squishy Cushion 2 [toreba 4th1-G 19号機]</li>
+					<li href="http://www.toreba.net/play/select/32010"><p class="icon3">Available</p>Minions - Glitter Lighting Doll [toreba 3rd-B 10号機]</li>
+					<li href="http://www.toreba.net/play/select/32009"><p class="icon3">Available</p>Minions - Glitter Lighting Doll [toreba 3rd-B 09号機]</li>
+					<li href="http://www.toreba.net/play/select/420516"><p class="icon3">Available</p>Sushi Pet - Plushy Pouch [toreba 4th2-E 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420416"><p class="icon3">Available</p>List Up &amp; Kururin Coasters [toreba 4th2-D 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410310"><p class="icon3">Available</p>Sanrio Characters - Cute Mascot [toreba 4th1-C 10号機]</li>
+					<li href="http://www.toreba.net/play/select/411019"><p class="icon3">Available</p>Walking Turtle Block Set [toreba 4th1-J 19号機]</li>
+					<li href="http://www.toreba.net/play/select/2018"><p class="icon3">Available</p>Pokemon: Sun &amp; Moon- Premium Backpack [toreba-S 18号機]</li>
+					<li href="http://www.toreba.net/play/select/36012"><p class="icon3">Available</p>Crayon Shin-chan - Squishy Plushy [toreba 3rd-F 12号機]</li>
+					<li href="http://www.toreba.net/play/select/36011"><p class="icon3">Available</p>Crayon Shin-chan - Squishy Plushy [toreba 3rd-F 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410913"><p class="icon3">Available</p>Ice Cream Cup &amp; Spoon Set [toreba 4th1-I 13号機]</li>
+					<li href="http://www.toreba.net/play/select/36025"><p class="icon3">Available</p>FANS - Pancake Cushion [toreba 3rd-F 25号機]</li>
+					<li href="http://www.toreba.net/play/select/420125"><p class="icon3">Available</p>Princess Round Fastener Wallet 2 [toreba 4th2-A 25号機]</li>
+					<li href="http://www.toreba.net/play/select/420218"><p class="icon3">Available</p>Pon de Lion and Friends - Attachable Big Plushy ~Various Pon de Lion~ [toreba 4th2-B 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410815"><p class="icon3">Available</p>Initial Mug [toreba 4th1-H 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420111"><p class="icon3">Available</p>Curious George - Let&#039;s Play BIG Plushy [toreba 4th2-A 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410820"><p class="icon3">Available</p>Squishy Salty Milky Plushy MC [toreba 4th1-H 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420216"><p class="icon3">Available</p>Koshikake Village [toreba 4th2-B 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420708"><p class="icon3">Available</p>Cheese Cutter Set [toreba 4th2-G 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420902"><p class="icon3">Available</p>Pepsi BIG Steel Clock [toreba 4th2-I 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420520"><p class="icon3">Available</p>Hedgehog - Bolster (Brown) [toreba 4th2-E 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420519"><p class="icon3">Available</p>Chip &amp; Dale - Happening Mug [toreba 4th2-E 19号機]</li>
+					<li href="http://www.toreba.net/play/select/420404"><p class="icon3">Available</p>Disney Princess - Frill Design BIG Tote Bag [toreba 4th2-D 04号機]</li>
+					<li href="http://www.toreba.net/play/select/420304"><p class="icon3">Available</p>Sumikkogurashi - Long Wallet [toreba 4th2-C 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410214"><p class="icon3">Available</p>Let&#039;s Make the Best Birthday Party with Mom! First Set &amp; Decoration Parts Assortment [toreba 4th1-B 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420610"><p class="icon3">Available</p>Donald Duck - Birth Memorial Premium Figure [toreba 4th2-F 10号機]</li>
+					<li href="http://www.toreba.net/play/select/420608"><p class="icon3">Available</p>Sanrio Characters x Monimals Pompompurin - Giga-Jumbo Plushy [toreba 4th2-F 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410505"><p class="icon3">Available</p>Dragon Ball Z - BANPRESTO WORLD FIGURE COLOSSEUM (Trunks) [toreba 4th1-E 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410211"><p class="icon3">Available</p>FANS - Taiyaki Cushion [toreba 4th1-B 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410216"><p class="icon3">Available</p>Cinnamon Roll - Cinnamon &amp; Mocha Lying Down Big Plushy [toreba 4th1-B 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410218"><p class="icon3">Available</p>Disney Characters - Story Book Premium Book-shaped Collection Towel 6 Pcs Set [toreba 4th1-B 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410415"><p class="icon3">Available</p>Dragon Ball Z - BANPRESTO WORLD FIGURE COLOSSEUM (Trunks) [toreba 4th1-D 15号機]</li>
+					<li href="http://www.toreba.net/play/select/410504"><p class="icon3">Available</p>Dragon Ball Z - BANPRESTO WORLD FIGURE COLOSSEUM (Trunks) [toreba 4th1-E 04号機]</li>
+					<li href="http://www.toreba.net/play/select/421004"><p class="icon3">Available</p>Koshikake Village LMC [toreba 4th2-J 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410907"><p class="icon3">Available</p>Huggable Sushi Mascot Vol. 2 [toreba 4th1-I 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420506"><p class="icon3">Available</p>Mameshiba Siblings - V Mascot [toreba 4th2-E 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420219"><p class="icon3">Available</p>Sumikkogurashi - Drowse Mascot [toreba 4th2-B 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410915"><p class="icon3">Available</p>Tarushiba - Die-cut Pouch [toreba 4th1-I 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420301"><p class="icon3">Available</p>RC Nissan GT-R &amp; Toyota 86 Assortment [toreba 4th2-C 01号機]</li>
+					<li href="http://www.toreba.net/play/select/410819"><p class="icon3">Available</p>Character Polka Dot Pouch 4 Types [toreba 4th1-H 19号機]</li>
+					<li href="http://www.toreba.net/play/select/420315"><p class="icon3">Available</p>Rainbow Kit Mug Cap [toreba 4th2-C 15号機]</li>
+					<li href="http://www.toreba.net/play/select/410904"><p class="icon3">Available</p>Machi attached bag Moomin cave [toreba 4th1-I 04号機]</li>
+					<li href="http://www.toreba.net/play/select/420704"><p class="icon3">Available</p>Gachapin Mukku One Touch Stainless Bottle [toreba 4th2-G 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410110"><p class="icon3">Available</p>Snoopy - Big Folding Stool [toreba 4th1-A 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410116"><p class="icon3">Available</p>Kimoshiba XXL Soft and Squishy Plushy [toreba 4th1-A 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420130"><p class="icon3">Available</p>FANS - Chocolate Corone Cushion [toreba 4th2-A 30号機]</li>
+					<li href="http://www.toreba.net/play/select/410709"><p class="icon3">Available</p>Snow White - Stylish Bottle [toreba 4th1-G 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410118"><p class="icon3">Available</p>Soft &amp; Squishy Sunfish BIG Plushy [toreba 4th1-A 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410311"><p class="icon3">Available</p>Minions - Rolling Christmas Mascot (ball chain) [toreba 4th1-C 11号機]</li>
+					<li href="http://www.toreba.net/play/select/35011"><p class="icon3">Available</p>Starry Sky - Kiss Face Cushion (Aozora Hayato, Hoshizuki Kotaro) [toreba 3rd-E 11号機]</li>
+					<li href="http://www.toreba.net/play/select/420209"><p class="icon3">Available</p>Yokai Watch - Micro Wash Towel 2P Gift [toreba 4th2-B 09号機]</li>
+					<li href="http://www.toreba.net/play/select/32017"><p class="icon3">Available</p>Sanrio Character - Face-shaped Die Cut Lunch Box 3 Types [toreba 3rd-B 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420818"><p class="icon3">Available</p>Minions Face-shaped Tote Bag [toreba 4th2-H 18号機]</li>
+					<li href="http://www.toreba.net/play/select/420124"><p class="icon3">Available</p>Pokemon Oval Container L &amp; M (2 Pcs Set) [toreba 4th2-A 24号機]</li>
+					<li href="http://www.toreba.net/play/select/420806"><p class="icon3">Available</p>Model Human Body Bank [toreba 4th2-H 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420405"><p class="icon3">Available</p>Love Live! Sunshine!! - Going Out Bath Towel 2nd Vol. 1 [toreba 4th2-D 05号機]</li>
+					<li href="http://www.toreba.net/play/select/420110"><p class="icon3">Available</p>Osomatsusan Looking Back Raglan Squishy Die-cut Cushion 1 [toreba 4th2-A 10号機]</li>
+					<li href="http://www.toreba.net/play/select/420107"><p class="icon3">Available</p>Animal Clock [toreba 4th2-A 07号機]</li>
+					<li href="http://www.toreba.net/play/select/410816"><p class="icon3">Available</p>Doraemon - Premium Air Plushy [toreba 4th1-H 16号機]</li>
+					<li href="http://www.toreba.net/play/select/2054"><p class="icon3">Available</p>Super Sonico - Noodle Stopper Figure [toreba-S 54号機]</li>
+					<li href="http://www.toreba.net/play/select/2050"><p class="icon3">Available</p>Nemuneko - Taiyaki Big Plushy [toreba-S 50号機]</li>
+					<li href="http://www.toreba.net/play/select/420513"><p class="icon3">Available</p>Minions Begging Cushion [toreba 4th2-E 13号機]</li>
+					<li href="http://www.toreba.net/play/select/33017"><p class="icon3">Available</p>Tarepanda - Squishy Plushy XL [toreba 3rd-C 17号機]</li>
+					<li href="http://www.toreba.net/play/select/410916"><p class="icon3">Available</p>Yurukawa Sanrio Characters - Facial Expressions Rolling Mascot [toreba 4th1-I 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420208"><p class="icon3">Available</p>Koupen-chan - Slipper [toreba 4th2-B 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420128"><p class="icon3">Available</p>Lupin the Third - MASTER STARS PIECE LUPIN THE THIRD 2018 [toreba 4th2-A 28号機]</li>
+					<li href="http://www.toreba.net/play/select/420112"><p class="icon3">Available</p>Sanrio Characters - Double Mirror (Pop 80&#039;s) (Long Type) [toreba 4th2-A 12号機]</li>
+					<li href="http://www.toreba.net/play/select/420313"><p class="icon3">Available</p>Squishy Salty Mily CUTE PLUSHIES [toreba 4th2-C 13号機]</li>
+					<li href="http://www.toreba.net/play/select/410401"><p class="icon3">Available</p>Campbell&#039;s - 2-tier Square Lunchbox [toreba 4th1-D 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420909"><p class="icon3">Available</p>Alien - Clear Bottle [toreba 4th2-I 09号機]</li>
+					<li href="http://www.toreba.net/play/select/420819"><p class="icon3">Available</p>Anpanman - Straw Cup 3 Pcs Set (No. 2) [toreba 4th2-H 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410506"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 5 [toreba 4th1-E 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410507"><p class="icon3">Available</p>One Piece - BANPRESTO WORLD FIGURE COLOSSEUM Zoukeio Tournament Vol. 5 [toreba 4th1-E 07号機]</li>
+					<li href="http://www.toreba.net/play/select/31006"><p class="icon3">Available</p>Disney Characters - Dreamy Dressy Mascot [toreba 3rd-A 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410802"><p class="icon3">Available</p>THE iDOLM@STER Cinderella Girls Visual Towel [toreba 4th1-H 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420117"><p class="icon3">Available</p>Wind Up Bary-san Toy [toreba 4th2-A 17号機]</li>
+					<li href="http://www.toreba.net/play/select/410712"><p class="icon3">Available</p>Disney Princess - Royal Clock Ver. 2 [toreba 4th1-G 12号機]</li>
+					<li href="http://www.toreba.net/play/select/31012"><p class="icon3">Available</p>Hello Kitty - Pink Heart Leopard Pattern Doll Giga Jumbo [toreba 3rd-A 12号機]</li>
+					<li href="http://www.toreba.net/play/select/31014"><p class="icon3">Available</p>Hello Kitty - Pink Heart Leopard Pattern Doll Giga Jumbo [toreba 3rd-A 14号機]</li>
+					<li href="http://www.toreba.net/play/select/31013"><p class="icon3">Available</p>Hello Kitty - Pink Heart Leopard Pattern Doll Giga Jumbo [toreba 3rd-A 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420306"><p class="icon3">Available</p>Sumikkogurashi - Fluffy Plushy XL Premium Lizard [toreba 4th2-C 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420918"><p class="icon3">Available</p>Disney - Snow White Poisoned Apple Piggy bank [toreba 4th2-I 18号機]</li>
+					<li href="http://www.toreba.net/play/select/34018"><p class="icon3">Available</p>Snoopy - Pastel Drop [toreba 3rd-D 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410705"><p class="icon3">Available</p>Nightmare - Jack 3 Types Mascot Ball Chain [toreba 4th1-G 05号機]</li>
+					<li href="http://www.toreba.net/play/select/31005"><p class="icon3">Available</p>Dynamic Chord - Metal Charm Collection Otoishi Yuusei [toreba 3rd-A 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410319"><p class="icon3">Available</p>Sumikkogurashi Wire Frame [toreba 4th1-C 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410908"><p class="icon3">Available</p>Hello Kitty - Crepe Store [toreba 4th1-I 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420807"><p class="icon3">Available</p>Premium Coffee Maker 4 [toreba 4th2-H 07号機]</li>
+					<li href="http://www.toreba.net/play/select/410111"><p class="icon3">Available</p>Make it with Play Dough! - Sweets Maker [toreba 4th1-A 11号機]</li>
+					<li href="http://www.toreba.net/play/select/410204"><p class="icon3">Available</p>Call &amp; Repeat - Skeleton Concert [toreba 4th1-B 04号機]</li>
+					<li href="http://www.toreba.net/play/select/410103"><p class="icon3">Available</p>Squishy Banana Cushion [toreba 4th1-A 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410906"><p class="icon3">Available</p>Yo-kai Watch Puni Puni - Room Mat [toreba 4th1-I 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410314"><p class="icon3">Available</p>Doraemon - Milky White Bottle, Pot &amp; Tumbler [toreba 4th1-C 14号機]</li>
+					<li href="http://www.toreba.net/play/select/411008"><p class="icon3">Available</p>Fitness Mat [toreba 4th1-J 08号機]</li>
+					<li href="http://www.toreba.net/play/select/32002"><p class="icon3">Available</p>Milky - Everywhere Pocket Watch [toreba 3rd-B 02号機]</li>
+					<li href="http://www.toreba.net/play/select/34019"><p class="icon3">Available</p>My Melody - Charm Mascot [toreba 3rd-D 19号機]</li>
+					<li href="http://www.toreba.net/play/select/34009"><p class="icon3">Available</p>Pompompurin - Purin and Friends Mascot [toreba 3rd-D 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410715"><p class="icon3">Available</p>Minions - Foam Pillow [toreba 4th1-G 15号機]</li>
+					<li href="http://www.toreba.net/play/select/410127"><p class="icon3">Available</p>Vintage Winnie the Pooh Hollow Mug [toreba 4th1-A 27号機]</li>
+					<li href="http://www.toreba.net/play/select/420719"><p class="icon3">Available</p>Chax GP The Very Hungry Shark Slitgill Eating Play Napping Pillow [toreba 4th2-G 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410308"><p class="icon3">Available</p>Rice Clay 9 Color Set [toreba 4th1-C 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420116"><p class="icon3">Available</p>Kitty Exciting Game Set [toreba 4th2-A 16号機]</li>
+					<li href="http://www.toreba.net/play/select/411015"><p class="icon3">Available</p>Minions - Floor Mat [toreba 4th1-J 15号機]</li>
+					<li href="http://www.toreba.net/play/select/421006"><p class="icon3">Available</p>Doraemon - Room Light [toreba 4th2-J 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410130"><p class="icon3">Available</p>Disney Characters - Premium Stainless Bottle [toreba 4th1-A 30号機]</li>
+					<li href="http://www.toreba.net/play/select/411020"><p class="icon3">Available</p>Rilakkuma - Big Die-cut Mat [toreba 4th1-J 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410115"><p class="icon3">Available</p>Minions - Spring Style Mascot [toreba 4th1-A 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420127"><p class="icon3">Available</p>Golden Punch Bag DX [toreba 4th2-A 27号機]</li>
+					<li href="http://www.toreba.net/play/select/411002"><p class="icon3">Available</p>Karakusa Pouch Purse Shoulder Bag [toreba 4th1-J 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420510"><p class="icon3">Available</p>Hello Kitty - Cat Costume Plushy [toreba 4th2-E 10号機]</li>
+					<li href="http://www.toreba.net/play/select/2008"><p class="icon3">Available</p>Fluffy Animals - Sloth Bolster (NonNon) [toreba-S 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410412"><p class="icon3">Available</p>Bburago 1:43 Ferrari 12 Types Assortment [toreba 4th1-D 12号機]</li>
+					<li href="http://www.toreba.net/play/select/33016"><p class="icon3">Available</p>Anpanman - Kororon Pack Basic [toreba 3rd-C 16号機]</li>
+					<li href="http://www.toreba.net/play/select/410613"><p class="icon3">Available</p>Sleeping Forest&#039;s Five Fingers Fluffy Squishy Socks 4 Types [toreba 4th1-F 13号機]</li>
+					<li href="http://www.toreba.net/play/select/410201"><p class="icon3">Available</p>Minions - Easter Grand Jumbo Plushy 7 3 variation [toreba 4th1-B 01号機]</li>
+					<li href="http://www.toreba.net/play/select/410501"><p class="icon3">Available</p>Rilakkuma - Thin Melamin Plate [toreba 4th1-E 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420813"><p class="icon3">Available</p>Pokemon - Spinning Eco Bag (Up) [toreba 4th2-H 13号機]</li>
+					<li href="http://www.toreba.net/play/select/410710"><p class="icon3">Available</p>Hello Kitty - Microwave Bowl with Lid [toreba 4th1-G 10号機]</li>
+					<li href="http://www.toreba.net/play/select/420220"><p class="icon3">Available</p>Head Spa Cap [toreba 4th2-B 20号機]</li>
+					<li href="http://www.toreba.net/play/select/421005"><p class="icon3">Available</p>Princess &amp; Toy Story - Ramen Bowl [toreba 4th2-J 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410406"><p class="icon3">Available</p>Soft Cream Table Light [toreba 4th1-D 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410503"><p class="icon3">Available</p>Sumikkogurashi Shopping Bag w/ Badge [toreba 4th1-E 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410608"><p class="icon3">Available</p>Just Like Real Bread! Folding Mirror 2 [toreba 4th1-F 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410910"><p class="icon3">Available</p>Disney Characters Premium LED Candle Set [toreba 4th1-I 10号機]</li>
+					<li href="http://www.toreba.net/play/select/420414"><p class="icon3">Available</p>Mickey Mouse - Beyond Imagination Premium Big Tote Bag [toreba 4th2-D 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420809"><p class="icon3">Available</p>Alien - Giga Jumbo Finger Pointing Pose Fluffy Plushy [toreba 4th2-H 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410210"><p class="icon3">Available</p>Sumikkogurashi Body Bag (Navy) [toreba 4th1-B 10号機]</li>
+					<li href="http://www.toreba.net/play/select/411005"><p class="icon3">Available</p>Big &amp; Wild Power Shovel [toreba 4th1-J 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410108"><p class="icon3">Available</p>AAA E~Panda BIG Squishy Plushy 1 [toreba 4th1-A 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410707"><p class="icon3">Available</p>HELLO KITTY Cat Box Series Reversible Microket [toreba 4th1-G 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420716"><p class="icon3">Available</p>Disney Book Jewelry Box [toreba 4th2-G 16号機]</li>
+					<li href="http://www.toreba.net/play/select/31007"><p class="icon3">Available</p>Hatsune Miku Series - Pass Case feat. CHANxCO [toreba 3rd-A 07号機]</li>
+					<li href="http://www.toreba.net/play/select/410615"><p class="icon3">Available</p>DIY Castle Set (small) [toreba 4th1-F 15号機]</li>
+					<li href="http://www.toreba.net/play/select/420310"><p class="icon3">Available</p>Toy Soldiers 62 Pcs [toreba 4th2-C 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410413"><p class="icon3">Available</p>Rilakkuma Round Towel Blanket [toreba 4th1-D 13号機]</li>
+					<li href="http://www.toreba.net/play/select/410803"><p class="icon3">Available</p>Hello Kitty Tumbler Lunch Box [toreba 4th1-H 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410219"><p class="icon3">Available</p>Danbo Windchime [toreba 4th1-B 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410301"><p class="icon3">Available</p>Crayon Shin-chan - Pouch [toreba 4th1-C 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420603"><p class="icon3">Available</p>Sheep&#039;s notebook type smart case with sheep
+ [toreba 4th2-F 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410409"><p class="icon3">Available</p>Sumikkogurashi Index Alarm Clock [toreba 4th1-D 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410208"><p class="icon3">Available</p>Nightmare Before Christmas - Special Soft &amp; Plump Plushy [toreba 4th1-B 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410810"><p class="icon3">Available</p>Monsters Inc. - Premium Big Soft Plastic Figure #Mike [toreba 4th1-H 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410809"><p class="icon3">Available</p>Monsters Inc. - Premium Big Soft Plastic Figure #Mike [toreba 4th1-H 09号機]</li>
+					<li href="http://www.toreba.net/play/select/410603"><p class="icon3">Available</p>Anpanman - Fluffy Smile Plushy S [toreba 4th1-F 03号機]</li>
+					<li href="http://www.toreba.net/play/select/420401"><p class="icon3">Available</p>Aomuke Friends - Squishy Fluffy Plushy Big 2 [toreba 4th2-D 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420201"><p class="icon3">Available</p>QP Mentaiko Plushie [toreba 4th2-B 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420307"><p class="icon3">Available</p>Kitty - Cup (3pc) [toreba 4th2-C 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420409"><p class="icon3">Available</p>Snoopy - Index Wall Clock [toreba 4th2-D 09号機]</li>
+					<li href="http://www.toreba.net/play/select/420811"><p class="icon3">Available</p>Fruit Seal 16 cm [toreba 4th2-H 11号機]</li>
+					<li href="http://www.toreba.net/play/select/36006"><p class="icon3">Available</p>Doraemon &amp; You - Mega Jumbo Plushy [toreba 3rd-F 06号機]</li>
+					<li href="http://www.toreba.net/play/select/36005"><p class="icon3">Available</p>Doraemon &amp; You - Mega Jumbo Plushy [toreba 3rd-F 05号機]</li>
+					<li href="http://www.toreba.net/play/select/36003"><p class="icon3">Available</p>Doraemon &amp; You - Mega Jumbo Plushy [toreba 3rd-F 03号機]</li>
+					<li href="http://www.toreba.net/play/select/36004"><p class="icon3">Available</p>Doraemon &amp; You - Mega Jumbo Plushy [toreba 3rd-F 04号機]</li>
+					<li href="http://www.toreba.net/play/select/32027"><p class="icon3">Available</p>Osomatsu-san - Nadenade 6th Child Vol. 2 [toreba 3rd-B 27号機]</li>
+					<li href="http://www.toreba.net/play/select/420701"><p class="icon3">Available</p>Japanese Spirit - Tumbler [toreba 4th2-G 01号機]</li>
+					<li href="http://www.toreba.net/play/select/420907"><p class="icon3">Available</p>MagiReco - Plushy 2 [toreba 4th2-I 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420202"><p class="icon3">Available</p>Usadama-chan - Lying Down [toreba 4th2-B 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420810"><p class="icon3">Available</p>Frappen - Shaved Ice Plushy (with Ball Chain) [toreba 4th2-H 10号機]</li>
+					<li href="http://www.toreba.net/play/select/420503"><p class="icon3">Available</p>Mickey &amp; Minnie - Horizontal Tote Bag w/ Fastener k-1171B [toreba 4th2-E 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410716"><p class="icon3">Available</p>Square Plate for Oven [toreba 4th1-G 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420114"><p class="icon3">Available</p>Jinbee-san - Squishy Die Cut Cushion [toreba 4th2-A 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420817"><p class="icon3">Available</p>Ice Cream Table Light [toreba 4th2-H 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420805"><p class="icon3">Available</p>Care Bears - Plushy XL Premium Grumpy Bear [toreba 4th2-H 05号機]</li>
+					<li href="http://www.toreba.net/play/select/410417"><p class="icon3">Available</p>Olga Hand Tote Bag [toreba 4th1-D 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420507"><p class="icon3">Available</p>FuniFuni Marshmallow - Neko Funi Super Big Plushy [toreba 4th2-E 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420616"><p class="icon3">Available</p>Rilakkuma - Face Shaped Hand-Held Enamel Stocker [toreba 4th2-F 16号機]</li>
+					<li href="http://www.toreba.net/play/select/420808"><p class="icon3">Available</p>Dragon Quest - AM Items Gallery Special Lotto&#039;s Sword [toreba 4th2-H 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410306"><p class="icon3">Available</p>Mini Bath Towel (pink pattern) [toreba 4th1-C 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420402"><p class="icon3">Available</p>Aomuke Friends - Squishy Fluffy Plushy Big 2 [toreba 4th2-D 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420317"><p class="icon3">Available</p>FANS - Aspara Plushy XL [toreba 4th2-C 17号機]</li>
+					<li href="http://www.toreba.net/play/select/421007"><p class="icon3">Available</p>Snoopy Rain Hat [toreba 4th2-J 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420122"><p class="icon3">Available</p>Bear&#039;s Salmon - Banzai Large Mascot [toreba 4th2-A 22号機]</li>
+					<li href="http://www.toreba.net/play/select/410813"><p class="icon3">Available</p>Disney Tsum Tsum - Cute Gift (Alice) [toreba 4th1-H 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420816"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Big Rolling Round Plushy ~Raichu, Ampharos, Voltorb~ [toreba 4th2-H 16号機]</li>
+					<li href="http://www.toreba.net/play/select/421002"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Big Rolling Round Plushy ~Raichu, Ampharos, Voltorb~ [toreba 4th2-J 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420906"><p class="icon3">Available</p>Pokemon Sun &amp; Moon - Big Rolling Round Plushy ~Raichu, Ampharos, Voltorb~ [toreba 4th2-I 06号機]</li>
+					<li href="http://www.toreba.net/play/select/420820"><p class="icon3">Available</p>Animal Plushy Pouch with Strap - Wombat/Tasmanian Devil/Koala [toreba 4th2-H 20号機]</li>
+					<li href="http://www.toreba.net/play/select/420101"><p class="icon3">Available</p>Rilakkuma - Big Cool Insulated Tote K-6772A [toreba 4th2-A 01号機]</li>
+					<li href="http://www.toreba.net/play/select/410120"><p class="icon3">Available</p>American Dog Maker [toreba 4th1-A 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410617"><p class="icon3">Available</p>Rilakkuma Gift (Rilakkuma Time Pattern) WT1P [toreba 4th1-F 17号機]</li>
+					<li href="http://www.toreba.net/play/select/420308"><p class="icon3">Available</p>Towel Mat (Star Blue) [toreba 4th2-C 08号機]</li>
+					<li href="http://www.toreba.net/play/select/410618"><p class="icon3">Available</p>Energy - Cross Body Bag [toreba 4th1-F 18号機]</li>
+					<li href="http://www.toreba.net/play/select/410408"><p class="icon3">Available</p>Disney Toy Story Puzzle Calendar 837-pieces [toreba 4th1-D 08号機]</li>
+					<li href="http://www.toreba.net/play/select/420720"><p class="icon3">Available</p>Cinnamoroll Pastel Color Tea Cup &amp; Saucer [toreba 4th2-G 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410403"><p class="icon3">Available</p>Make It with Playdough &quot;Police Car&quot; [toreba 4th1-D 03号機]</li>
+					<li href="http://www.toreba.net/play/select/410402"><p class="icon3">Available</p>Magnetic Authentic Japanese Chess [toreba 4th1-D 02号機]</li>
+					<li href="http://www.toreba.net/play/select/410419"><p class="icon3">Available</p>Minions - Rolling Christmas Plushy [toreba 4th1-D 19号機]</li>
+					<li href="http://www.toreba.net/play/select/410509"><p class="icon3">Available</p>Work Vehicles - Pull Back Car Assortment [toreba 4th1-E 09号機]</li>
+					<li href="http://www.toreba.net/play/select/420712"><p class="icon3">Available</p>Disney - Glass (Star) 2 Types [toreba 4th2-G 12号機]</li>
+					<li href="http://www.toreba.net/play/select/420611"><p class="icon3">Available</p>Anpanman - Paper Lantern [toreba 4th2-F 11号機]</li>
+					<li href="http://www.toreba.net/play/select/420518"><p class="icon3">Available</p>Duck - Ultrasonic Humidifier [toreba 4th2-E 18号機]</li>
+					<li href="http://www.toreba.net/play/select/420602"><p class="icon3">Available</p>Splatoon - Handkerchief BOX [toreba 4th2-F 02号機]</li>
+					<li href="http://www.toreba.net/play/select/420713"><p class="icon3">Available</p>Pokemon Tea Party - Pikachu Face Mug Cup [toreba 4th2-G 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420804"><p class="icon3">Available</p>Snoopy - Mini Denim Fabric Backpack [toreba 4th2-H 04号機]</li>
+					<li href="http://www.toreba.net/play/select/420407"><p class="icon3">Available</p>Hell Teacher Nūbē - Demon Hands [toreba 4th2-D 07号機]</li>
+					<li href="http://www.toreba.net/play/select/420814"><p class="icon3">Available</p>Snack World Deca Cabinet - Holiday Cat Shield -
+ [toreba 4th2-H 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420103"><p class="icon3">Available</p>Rilakkuma Relaxing Cat Snap Pouch Purse [toreba 4th2-A 03号機]</li>
+					<li href="http://www.toreba.net/play/select/420801"><p class="icon3">Available</p>Winnie the Pooh - Big Lunch Cloth (Colorful) [toreba 4th2-H 01号機]</li>
+					<li href="http://www.toreba.net/play/select/36023"><p class="icon3">Available</p>Candy Teddy Bears - Pastel Color Large Mascot [toreba 3rd-F 23号機]</li>
+					<li href="http://www.toreba.net/play/select/420214"><p class="icon3">Available</p>It Changes Colors! Cooking Set [toreba 4th2-B 14号機]</li>
+					<li href="http://www.toreba.net/play/select/411006"><p class="icon3">Available</p>Hand-Rolled Meal (With Paddle) [toreba 4th1-J 06号機]</li>
+					<li href="http://www.toreba.net/play/select/410609"><p class="icon3">Available</p>Disney - Little Kingdom Good Friends Board Rapunzel [toreba 4th1-F 09号機]</li>
+					<li href="http://www.toreba.net/play/select/411012"><p class="icon3">Available</p>Mechanical Dog [toreba 4th1-J 12号機]</li>
+					<li href="http://www.toreba.net/play/select/420514"><p class="icon3">Available</p>Mickey &amp; Minnie Gift (Natural Garden) WT2P [toreba 4th2-E 14号機]</li>
+					<li href="http://www.toreba.net/play/select/410903"><p class="icon3">Available</p>Rainbow Kit Plate [toreba 4th1-I 03号機]</li>
+					<li href="http://www.toreba.net/play/select/420609"><p class="icon3">Available</p>Bear&#039;s School - School Cushion (Happy Jackie) [toreba 4th2-F 09号機]</li>
+					<li href="http://www.toreba.net/play/select/420512"><p class="icon3">Available</p>Japanese Pattern Drunkard 3P Set (Sumo Wrestling) [toreba 4th2-E 12号機]</li>
+					<li href="http://www.toreba.net/play/select/31004"><p class="icon3">Available</p>Shakurel Planet - Rabbit BIG Plushy [toreba 3rd-A 04号機]</li>
+					<li href="http://www.toreba.net/play/select/420318"><p class="icon3">Available</p>Heartwarming Duck Family - Plushy [toreba 4th2-C 18号機]</li>
+					<li href="http://www.toreba.net/play/select/411018"><p class="icon3">Available</p>Halloween Hat Assortment (5 types) [toreba 4th1-J 18号機]</li>
+					<li href="http://www.toreba.net/play/select/32005"><p class="icon3">Available</p>Girls und Panzer Das Finale x Pacific Racing Team - Mega Jumbo Plushy &quot;Miho&quot; [toreba 3rd-B 05号機]</li>
+					<li href="http://www.toreba.net/play/select/33018"><p class="icon3">Available</p>Tarepanda - Squishy Plushy XL [toreba 3rd-C 18号機]</li>
+					<li href="http://www.toreba.net/play/select/34008"><p class="icon3">Available</p>Starry Sky - Goods Set [toreba 3rd-D 08号機]</li>
+					<li href="http://www.toreba.net/play/select/36013"><p class="icon3">Available</p>Starry Sky - Kiss Face Cushion (Kanakubo Homare, Mizushima Iku) [toreba 3rd-F 13号機]</li>
+					<li href="http://www.toreba.net/play/select/420511"><p class="icon3">Available</p>Sanrio Characters Fancy Mix 1000Pcs Puzzle [toreba 4th2-E 11号機]</li>
+					<li href="http://www.toreba.net/play/select/34023"><p class="icon3">Available</p>Snoopy - Cooler Lunch Bag [toreba 3rd-D 23号機]</li>
+					<li href="http://www.toreba.net/play/select/410215"><p class="icon3">Available</p>Anpanman - BuBuBuldozer &amp; Shovel Car [toreba 4th1-B 15号機]</li>
+					<li href="http://www.toreba.net/play/select/410514"><p class="icon3">Available</p>Run by Pen! Work Vehicle [toreba 4th1-E 14号機]</li>
+					<li href="http://www.toreba.net/play/select/420210"><p class="icon3">Available</p>Rilakkuma Gift (Rilakkuma Time Pattern) WT2P [toreba 4th2-B 10号機]</li>
+					<li href="http://www.toreba.net/play/select/410720"><p class="icon3">Available</p>Rilakkuma Share the Mittens Gratin Plate [toreba 4th1-G 20号機]</li>
+					<li href="http://www.toreba.net/play/select/410414"><p class="icon3">Available</p>Sanrio Characters One Touch Stainless Bottle [toreba 4th1-D 14号機]</li>
+				</ul>
+			</div>
+		</div>	<!-- //#info_area -->
+
+		<div id="img_flow">
+				<ul>
+					<li><span>Play Toreba</span></li>
+					<li><span>Request shipping</span></li>
+					<li><span>Get a prize!</span></li>
+				</ul>
+		</div>
+		<p id="logo_cs" class="fl"><a href="http://corp.cyberstep.com" target="_blank"><img src="http://www.toreba.net/images/logo_cs.png"></a></p>
+		<nav id="nav_footer">
+			<ul class="horizon_center">
+				<li>
+					<ul>
+						<li><a href="http://www.toreba.net/support/guide/toreba_guide" title="User Guide">User Guide</a></li>
+						<li><a href="http://www.toreba.net/support/guide/sitemap" title="Site Map">Site Map</a></li>
+						<li><a href="https://www.toreba.net/contact" title="Inquiry">Inquiry</a></li>
+						<li><a href="http://corp.cyberstep.com/company/profile_en.html" target="_blank" title="About Us">About Us</a></li>
+					</ul>
+				</li>
+				<li>
+					<ul>
+						<li><a href="http://www.toreba.net/support/terms/service" title="Terms of Service">Terms of Service</a></li>
+												<li><a href="http://www.toreba.net/support/terms/policy" title="Privacy Policy">Privacy Policy</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav><!-- //#nav_footer -->
+		<p id="copyright">
+			<small>
+				&copy; 2011 CyberStep,Inc.								<br>
+				The Android Logo is a work created and shared by Google and used according to terms described in the Creative Commons 3.0 Attribution License. Original can be found <a href="http://www.android.com/developers/branding.html" target="_blank">here</a>
+							</small>
+		</p>
+	</div><!-- //#footer -->
+</footer>
+	</div>
+</body>
+</html>
